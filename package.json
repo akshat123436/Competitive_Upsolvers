@@ -1,0 +1,24 @@
+{
+  "name": "cp-project",
+  "version": "1.0.0",
+  "description": "This web application tracks the stats of a user across various competitive programming platforms and provides other various functionalities",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshat123436/Competitive-Programming-profile-tracker.git"
+  },
+  "author": "akshat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshat123436/Competitive-Programming-profile-tracker/issues"
+  },
+  "homepage": "https://github.com/akshat123436/Competitive-Programming-profile-tracker#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.1"
+  }
+}
