@@ -1,3 +1,36 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
 .nav{
-    background-color: blue;
+    position: fixed;
+    top : 0;
+    width: 100%;
+    display: flex;
+    background-color: rgb(211, 229, 224);
+    font-size: x-large;
+}
+.nav-a{
+    /* border : 2px solid white; */
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 1.4rem;
+}
+.nav-a:hover{
+    color:white;
+    background-color: black;
+    transition-duration: 0.8s;
+}
+.nav-first{
+    margin-left: auto;
+}
+.nav-second{
+    margin-right: 2rem;
+}
+.nav-image{
+    width: 13rem;
+    height: 51px;
+    margin-left: 1.7rem;
+    margin-top: auto;
+    margin-bottom: auto;
 }
