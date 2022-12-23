@@ -3,9 +3,11 @@ const app = express();
 const path = require("path");
 const ejsmate = require("ejs-mate");
 const normalRoutes = require("./routes/normalRoutes");
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.engine("ejs", ejsmate);
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", normalRoutes);
 
