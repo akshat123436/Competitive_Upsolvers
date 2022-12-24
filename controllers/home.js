@@ -20,7 +20,7 @@ module.exports = {
         }
         upcoming_contest.reverse();
         const title = "home";
-        res.render("home", { upcoming_contest, title });
+        res.render("dashboard", { upcoming_contest, title });
       })
       .catch((err) => {
         console.log(err);

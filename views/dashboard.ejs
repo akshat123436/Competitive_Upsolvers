@@ -1,0 +1,21 @@
+<% layout("layouts/boilerplate") %>
+<div class="contests">
+  <% for(let i = 0;i<5;i++){ %> <%var minutes =
+  Math.floor(parseInt(upcoming_contest[i][1])/60) % 60;%> <%var hours =
+  Math.floor(parseInt(upcoming_contest[i][1])/3600) % 24;%> <%var days =
+  Math.floor(parseInt(upcoming_contest[i][1])/3600/24);%>
+
+  <h2>
+    <%=upcoming_contest[i][0]%> <%=`Time remaining : ${days} days ${hours} hours
+    and ${minutes} minutes` %>
+  </h2>
+  <%} %>
+</div>
+<div class="blogs horizontal">
+  <div class="dsa450">
+    <h3>DSA 450 Tacker</h3>
+  </div>
+  <div class="dsa450">
+    <h3>Your collectoins</h3>
+  </div>
+</div>
