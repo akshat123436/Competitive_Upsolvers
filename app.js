@@ -4,6 +4,18 @@ const path = require("path");
 const ejsmate = require("ejs-mate");
 const normalRoutes = require("./routes/normalRoutes");
 const expressError = require("./utils/errorclass");
+const mongoose = require("mongoose");
+main().catch((err) => console.log(err));
+
+async function main() {
+  await mongoose.connect("mongodb://localhost:27017/projectwebsite");
+}
+const db = mongoose.connection;
+
+db.on("error", console.error.bind(console, "connection error"));
+db.once("open", () => {
+  console.log("connection open");
+});
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
