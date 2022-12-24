@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     height: 100%;
+    padding-top: 40px;
 }
 .nav{
     position: fixed;
@@ -33,4 +34,8 @@ html, body {
     margin-left: 1.7rem;
     margin-top: auto;
     margin-bottom: auto;
+}
+.empty{
+    position: relative;
+    top:-50px;
 }
