@@ -1,1 +1,8 @@
-<% layout("layouts/boilerplate") %> <%= allblogs %>
+<% layout("layouts/boilerplate") %> <%- include("./partials/centerhead.ejs") %>
+<% for(let ablog of allblogs){ %>
+<div>
+  <h2><%=ablog.author %></h2>
+  <h1><%=ablog.title %></h1>
+  <p><%=ablog.content %></p>
+</div>
+<%} %>
