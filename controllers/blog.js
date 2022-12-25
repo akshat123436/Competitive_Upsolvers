@@ -12,13 +12,13 @@ module.exports = {
     res.render("blogs", { title, allblogs, heading });
   },
   newblog: (req, res) => {
-    res.render("./forms/newblog.ejs");
+    const heading = "NEW BLOG";
+    const title = "NEW BLOG";
+    res.render("./forms/newblog.ejs", { heading, title });
   },
   createblog: async (req, res) => {
-    // req.body.blog.author = "Author";
     const newblog = new Blog(req.body.blog);
     await newblog.save();
-    // res.send(req.body);
     res.redirect("/blog");
   },
 };
