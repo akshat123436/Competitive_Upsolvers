@@ -9,6 +9,7 @@ const session = require("express-session");
 const passport = require("passport");
 const localstrategy = require("passport-local");
 const { User } = require("./models/user");
+const flash = require("connect-flash");
 
 main().catch((err) => console.log(err));
 
@@ -36,6 +37,7 @@ app.use(session(sessionconfig));
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new localstrategy(User.authenticate()));
+app.use(flash());
 app.use((req, res, next) => {
   res.locals.currentuser = req.user;
   next();
