@@ -24,4 +24,5 @@ router
     }),
     authentication.loginuser
   );
+router.get("/logout", authentication.logout);
 module.exports = router;

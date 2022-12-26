@@ -25,4 +25,12 @@ module.exports = {
   loginuser: (req, res) => {
     res.redirect("/blog");
   },
+  logout: (req, res, next) => {
+    req.logout((err) => {
+      if (err) {
+        return next(err);
+      }
+      res.redirect("/blog");
+    });
+  },
 };
