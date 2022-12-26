@@ -19,6 +19,7 @@ module.exports = {
   createblog: async (req, res) => {
     const newblog = new Blog(req.body.blog);
     await newblog.save();
+    req.flash("success", "Blog was created successfully");
     res.redirect("/blog");
   },
 };

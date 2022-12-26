@@ -12,6 +12,7 @@ module.exports = {
       const user = new User({ username });
       //   res.send(user);
       const registereduser = await User.register(user, password);
+      req.flash("success", "Registered successfully");
       res.redirect("/blog");
     } catch (e) {
       res.send(e);
@@ -23,13 +24,16 @@ module.exports = {
     res.render("./forms/login", { title, heading });
   },
   loginuser: (req, res) => {
+    req.flash("success", "Logged in successfully");
     res.redirect("/blog");
   },
-  logout: (req, res, next) => {
+  logout: (req, res) => {
     req.logout((err) => {
       if (err) {
         return next(err);
       }
+      req.flash("success", "Logged out successfully");
+
       res.redirect("/blog");
     });
   },

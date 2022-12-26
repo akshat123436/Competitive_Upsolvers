@@ -1,0 +1,9 @@
+<% if(success && success.length) { %>
+<div class="flashdiv">
+  <%= success %> <button type="button" class="flashbutton">&times;</button>
+</div>
+<% } %> <% if(error && error.length) { %>
+<div class="flashdiv">
+  <%= error %><button type="button" class="flashbutton">&times;</button>
+</div>
+<% } %>
