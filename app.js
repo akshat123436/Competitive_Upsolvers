@@ -5,6 +5,11 @@ const ejsmate = require("ejs-mate");
 const normalRoutes = require("./routes/normalRoutes");
 const expressError = require("./utils/errorclass");
 const mongoose = require("mongoose");
+const session = require("express-session");
+const passport = require("passport");
+const localstrategy = require("passport-local");
+const { User } = require("./models/user");
+
 main().catch((err) => console.log(err));
 
 async function main() {
@@ -22,6 +27,19 @@ app.set("views", path.join(__dirname, "views"));
 app.engine("ejs", ejsmate);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+const sessionconfig = {
+  secret: "MYSECRET",
+  resave: false,
+  saveUninitialised: true,
+};
+app.use(session(sessionconfig));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localstrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 app.use("/", normalRoutes);
 
 // app.get("*", (req, res) => {
