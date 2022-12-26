@@ -36,6 +36,10 @@ app.use(session(sessionconfig));
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new localstrategy(User.authenticate()));
+app.use((req, res, next) => {
+  res.locals.currentuser = req.user;
+  next();
+});
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());

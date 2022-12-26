@@ -6,6 +6,10 @@
 
   <a class="nav-a" href="/dashboard">YOUR COLLECTIONS</a>
   <a class="nav-a nav-second" href="/dashboard">DSA 450</a>
-  <a class="nav-a nav-second" href="/dashboard">LOGIN</a>
+  <% if(!currentuser){ %>
+  <a class="nav-a nav-second" href="/login">LOGIN</a>
   <a class="nav-a nav-second" href="/register">REGISTER</a>
+  <% } else{ %>
+  <a class="nav-a nav-second" href="/profile"> &smile;</a>
+  <% } %>
 </div>
