@@ -6,7 +6,8 @@ const authentication = require("../controllers/authentication");
 const passport = require("passport");
 const middlewares = require("../middleware");
 const collection = require("../controllers/collection");
-const { isLoggedin } = require("../middleware");
+const question = require("../controllers/question");
+
 // console.log(contestadder);
 router.get("/dashboard", contestadder);
 router.route("/blog").get(blog.blogShow).post(blog.createblog);
@@ -34,5 +35,10 @@ router
   .route("/collection")
   .get(middlewares.isLoggedin, collection.rendercollection)
   .post(middlewares.isLoggedin, collection.create);
+
+router
+  .route("/question/:id")
+  .get(middlewares.isLoggedin, question.renderform)
+  .post(middlewares.isLoggedin, question.create);
 
 module.exports = router;

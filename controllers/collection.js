@@ -41,16 +41,22 @@ module.exports = {
     const remarks = [];
     const currentu = await User.findById(req.user._id);
     for (let question of collection.questions) {
-      submissionstatus.push(
+      if (
         currentu.questions.find((q) => {
           return q.id.toString() === question._id.toString();
-        }).submission
-      );
-      remarks.push(
-        currentu.questions.find((q) => {
-          return q.id.toString() === question._id.toString();
-        }).remark
-      );
+        })
+      ) {
+        submissionstatus.push(
+          currentu.questions.find((q) => {
+            return q.id.toString() === question._id.toString();
+          }).submission
+        );
+        remarks.push(
+          currentu.questions.find((q) => {
+            return q.id.toString() === question._id.toString();
+          }).remark
+        );
+      }
     }
 
     res.render("./collection/show", {

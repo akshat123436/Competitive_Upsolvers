@@ -1,0 +1,21 @@
+<% layout("layouts/boilerplate") %> <%- include("../partials/centerhead.ejs") %>
+<form action="/question/<%= id %> " method="post">
+  <label for="title">TITLE : </label>
+  <input type="text" name="title" id="title" />
+  <br />
+  <label for="status">SUBMISSION STATUS:</label>
+  <select id="status" name="status">
+    <option value="CORRECT">CORRECT</option>
+    <option value="NOT ATTEMPTED" selected>NOT ATTEMPTED</option>
+    <option value="INCORRECT">INCORRECT</option>
+    <option value="PARTIALLY SOLVED">PARTIALLY SOLVED</option>
+  </select>
+  <br />
+  <label for="url">URL : </label>
+  <input type="text" name="url" id="url" />
+  <br />
+  <label for="remarks">REMARKS : </label>
+  <input type="text" name="remarks" id="remarks" />
+  <br />
+  <button type="submit">ADD</button>
+</form>
