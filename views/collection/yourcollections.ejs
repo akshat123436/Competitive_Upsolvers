@@ -1,0 +1,8 @@
+<% layout("layouts/boilerplate") %>
+<h1><%= title %></h1>
+<% for(let collection of user.collections){ %>
+<div>
+  <h2><%= collection.title %></h2>
+</div>
+<%} %>
+<button><a href="/newcollection">ADD NEW COLLECTION</a></button>

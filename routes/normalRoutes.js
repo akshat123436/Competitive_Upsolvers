@@ -26,9 +26,12 @@ router
     }),
     authentication.loginuser
   );
-router.get("/logout", authentication.logout);
+router.get("/logout", middlewares.isLoggedin, authentication.logout);
 
 router.get("/newcollection", middlewares.isLoggedin, collection.renderform);
-router.route("/collection").post(middlewares.isLoggedin, collection.create);
+router
+  .route("/collection")
+  .get(middlewares.isLoggedin, collection.rendercollection)
+  .post(middlewares.isLoggedin, collection.create);
 router.route("/collection/:id").get(middlewares.isLoggedin, collection.show);
 module.exports = router;

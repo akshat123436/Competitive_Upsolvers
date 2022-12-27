@@ -34,4 +34,11 @@ module.exports = {
     const heading = collection.title;
     res.render("collection/show", { title, heading, collection });
   },
+  rendercollection: async (req, res) => {
+    const userid = req.user._id;
+    const user = await User.findById(userid).populate("collections");
+    const title = "YOUR COLLECTIONS";
+    // res.send(user);
+    res.render("./collection/yourcollections", { title, user });
+  },
 };
