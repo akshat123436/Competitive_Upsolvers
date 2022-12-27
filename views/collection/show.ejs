@@ -7,10 +7,19 @@
     <th>remarks</th>
   </tr>
   <% let i = 0; for(let question of collection.questions){ %>
-  <tr>
-    <td><%= question.title %></td>
-    <td><%= submissionstatus[i]%></td>
-    <td><%= remarks[i] %></td>
-  </tr>
+  <form action="/collection/:id" method="post">
+    <tr>
+      <td><%= question.title %></td>
+      <td><select name="submissionstatus">
+        <option value="CORRECT"<%= (submissionstatus[i]==="CORRECT") ? "selected" : "" %>>CORRECT</option>
+        <option value="NOT ATTEMPTED" <%= (submissionstatus[i]==="NOT ATTEMPTED") ? "selected" : "" %> >NOT ATTEMPTED</option> 
+        <option value="INCORRECT"<%= (submissionstatus[i]==="INCORRECT") ? "selected" : "" %>>INCORRECT</option>
+        <option value="PARTIALLY SOLVED"<%= (submissionstatus[i]==="PARTIALLY SOLVED") ? "selected" : "" %>>PARTIALLY SOLVED</option>
+      </select></td>
+      <td>    <input type="text" name="remark" id="" value = "<%= remarks[i] %> ">
+      </td>
+      <td><button type="submit">UPDATE</button></td>
+    </tr>
+  </form>
   <% i++; } %>
 </table>
