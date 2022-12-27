@@ -55,7 +55,7 @@ app.use("/", normalRoutes);
 // });
 
 app.all("*", (req, res, next) => {
-  console.log("invalid link");
+  console.log("----invalid link");
   next(new expressError("Page not found", 404));
 });
 

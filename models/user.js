@@ -14,7 +14,10 @@ const UserSchema = new schema({
   ],
   questions: [
     {
-      submission: String,
+      submission: {
+        type: String,
+        enum: ["NOT ATTEMPTED", "CORRECT", "INCORRECT", "PARTIALLY SOLVED"],
+      },
       remark: String,
       id: {
         type: schema.Types.ObjectId,

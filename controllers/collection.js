@@ -1,6 +1,7 @@
 const { Question } = require("../models/question");
 const { Collection } = require("../models/collection");
 const { User } = require("../models/user");
+const question = require("../models/question");
 module.exports = {
   renderform: (req, res) => {
     const title = "NEW COLLECTION";
@@ -22,7 +23,7 @@ module.exports = {
     newu.collections.push(collection);
     newu.questions.push({
       id: question,
-      submission: "Not Attempted",
+      submission: "NOT ATTEMPTED",
       remark: "none",
     });
     await newu.save();
@@ -30,10 +31,35 @@ module.exports = {
     res.redirect("/collection");
   },
   show: async (req, res) => {
-    const collection = await Collection.findById(req.params.id);
+    const collection = await Collection.findById(req.params.id).populate(
+      "questions"
+    );
+    // console.log(collection);
     const title = collection.title;
     const heading = collection.title;
-    res.render("collection/show", { title, heading, collection });
+    const submissionstatus = [];
+    const remarks = [];
+    const currentu = await User.findById(req.user._id);
+    for (let question of collection.questions) {
+      submissionstatus.push(
+        currentu.questions.find((q) => {
+          return q.id.toString() === question._id.toString();
+        }).submission
+      );
+      remarks.push(
+        currentu.questions.find((q) => {
+          return q.id.toString() === question._id.toString();
+        }).remark
+      );
+    }
+
+    res.render("./collection/show", {
+      title,
+      heading,
+      collection,
+      submissionstatus,
+      remarks,
+    });
   },
   rendercollection: async (req, res) => {
     const userid = req.user._id;

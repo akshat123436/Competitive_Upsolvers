@@ -29,9 +29,10 @@ router
 router.get("/logout", middlewares.isLoggedin, authentication.logout);
 
 router.get("/newcollection", middlewares.isLoggedin, collection.renderform);
+router.get("/collection/:id", middlewares.isLoggedin, collection.show);
 router
   .route("/collection")
   .get(middlewares.isLoggedin, collection.rendercollection)
   .post(middlewares.isLoggedin, collection.create);
-router.route("/collection/:id").get(middlewares.isLoggedin, collection.show);
+
 module.exports = router;

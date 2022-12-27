@@ -1,5 +1,16 @@
-<% layout("layouts/boilerplate") %> <%- include("./partials/centerhead.ejs") %>
-<form action="/question" method="get">ADD NEW QUESTION</form>
-<% for(let ablog of allblogs){ %>
-<div></div>
-<%} %>
+<% layout("layouts/boilerplate") %> <%- include("../partials/centerhead.ejs") %>
+<button><a href="/question">ADD NEW QUESTION</a></button>
+<table>
+  <tr>
+    <th>title</th>
+    <th>submission statuss</th>
+    <th>remarks</th>
+  </tr>
+  <% let i = 0; for(let question of collection.questions){ %>
+  <tr>
+    <td><%= question.title %></td>
+    <td><%= submissionstatus[i]%></td>
+    <td><%= remarks[i] %></td>
+  </tr>
+  <% i++; } %>
+</table>
