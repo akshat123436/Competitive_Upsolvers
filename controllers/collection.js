@@ -26,7 +26,8 @@ module.exports = {
       remark: "none",
     });
     await newu.save();
-    res.send(newu);
+    req.flash("success", "Collection was created successfully");
+    res.redirect("/collection");
   },
   show: async (req, res) => {
     const collection = await Collection.findById(req.params.id);

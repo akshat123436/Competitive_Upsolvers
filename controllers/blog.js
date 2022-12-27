@@ -17,6 +17,7 @@ module.exports = {
     res.render("./forms/newblog.ejs", { heading, title });
   },
   createblog: async (req, res) => {
+    req.body.blog.author = req.user.username;
     const newblog = new Blog(req.body.blog);
     await newblog.save();
     req.flash("success", "Blog was created successfully");
