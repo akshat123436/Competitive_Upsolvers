@@ -30,7 +30,12 @@ router
 router.get("/logout", middlewares.isLoggedin, authentication.logout);
 
 router.get("/newcollection", middlewares.isLoggedin, collection.renderform);
-router.get("/collection/:id", middlewares.isLoggedin, collection.show);
+router.get(
+  "/collection/:id",
+  middlewares.isLoggedin,
+  middlewares.isOwner,
+  collection.show
+);
 router
   .route("/collection")
   .get(middlewares.isLoggedin, collection.rendercollection)
@@ -40,7 +45,7 @@ router.post("/update/:questionid", middlewares.isLoggedin, question.update);
 
 router
   .route("/question/:id")
-  .get(middlewares.isLoggedin, question.renderform)
-  .post(middlewares.isLoggedin, question.create);
+  .get(middlewares.isLoggedin, middlewares.isOwner, question.renderform)
+  .post(middlewares.isLoggedin, middlewares.isOwner, question.create);
 
 module.exports = router;
