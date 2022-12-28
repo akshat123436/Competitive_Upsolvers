@@ -1,5 +1,7 @@
 <% layout("layouts/boilerplate") %> <%- include("../partials/centerhead.ejs") %>
+<% if(collection._id != "63abd1bcf163adaa2782778f")  {%> 
 <button><a href="/question/<%= collection._id %> ">ADD NEW QUESTION</a></button>
+<% } %> 
 <table>
   <tr>
     <th>title</th>
@@ -9,7 +11,7 @@
   <% let i = 0; for(let question of collection.questions){ %>
   <form action="/update/<%=question._id %>" method="post">
     <tr>
-      <td><%= question.title %></td>
+      <td><a href="<%=question.url %>"><%= question.title %></a></td>
       <td><select name="submissionstatus">
         <option value="CORRECT"<%= (submissionstatus[i]==="CORRECT") ? "selected" : "" %>>CORRECT</option>
         <option value="NOT ATTEMPTED" <%= (submissionstatus[i]==="NOT ATTEMPTED") ? "selected" : "" %> >NOT ATTEMPTED</option> 

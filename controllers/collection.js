@@ -24,7 +24,7 @@ module.exports = {
     newu.questions.push({
       id: question,
       submission: "NOT ATTEMPTED",
-      remark: "none",
+      remark: "NONE",
     });
     await newu.save();
     req.flash("success", "Collection was created successfully");
@@ -56,6 +56,9 @@ module.exports = {
             return q.id.toString() === question._id.toString();
           }).remark
         );
+      } else {
+        submissionstatus.push("NOT ATTEMPTED");
+        remarks.push("NONE");
       }
     }
 

@@ -1,3 +1,4 @@
+const { Collection } = require("../models/collection");
 const { User } = require("../models/user");
 
 module.exports = {
@@ -9,7 +10,11 @@ module.exports = {
   registeruser: async (req, res, next) => {
     try {
       const { username, password } = req.body;
-      const user = new User({ username });
+      const dsa450 = await Collection.findById("63abd1bcf163adaa2782778f");
+      const user = new User({
+        username,
+        collections: [dsa450],
+      });
       //   res.send(user);
       const registereduser = await User.register(user, password);
       req.flash("success", "Registered successfully");

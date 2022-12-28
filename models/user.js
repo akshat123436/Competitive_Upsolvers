@@ -29,7 +29,7 @@ const UserSchema = new schema({
 
 UserSchema.plugin(passportlocalmongoose);
 
-UserSchema.methods.updatequestion = function (
+UserSchema.methods.updatequestion = async function (
   questionid,
   submissionstatus,
   remarks
@@ -42,6 +42,14 @@ UserSchema.methods.updatequestion = function (
       return this.save();
     }
   }
+  const newquestion = await Question.findById(questionid);
+  this.questions.push({
+    submission: submissionstatus,
+    remark: remarks,
+    id: newquestion,
+  });
+  // console.log(this.questions);
+  return this.save();
 };
 
 module.exports = {
