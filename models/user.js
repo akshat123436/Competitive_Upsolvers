@@ -29,6 +29,21 @@ const UserSchema = new schema({
 
 UserSchema.plugin(passportlocalmongoose);
 
+UserSchema.methods.updatequestion = function (
+  questionid,
+  submissionstatus,
+  remarks
+) {
+  // console.log(this);
+  for (let question of this.questions) {
+    if (question.id.toString() == questionid.toString()) {
+      question.submission = submissionstatus;
+      question.remark = remarks;
+      return this.save();
+    }
+  }
+};
+
 module.exports = {
   User: mongoose.model("User", UserSchema),
 };

@@ -42,4 +42,15 @@ module.exports = {
     });
     res.redirect(`/collection/${req.params.id}`);
   },
+  update: async (req, res) => {
+    const { questionid } = req.params;
+    const userr = await User.findById(req.user._id);
+    console.log(userr);
+    await userr.updatequestion(
+      questionid,
+      req.body.submissionstatus,
+      req.body.remark
+    );
+    res.redirect("/collection");
+  },
 };

@@ -36,6 +36,8 @@ router
   .get(middlewares.isLoggedin, collection.rendercollection)
   .post(middlewares.isLoggedin, collection.create);
 
+router.post("/update/:questionid", middlewares.isLoggedin, question.update);
+
 router
   .route("/question/:id")
   .get(middlewares.isLoggedin, question.renderform)

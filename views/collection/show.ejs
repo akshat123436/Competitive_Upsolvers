@@ -3,11 +3,11 @@
 <table>
   <tr>
     <th>title</th>
-    <th>submission statuss</th>
+    <th>submission status</th>
     <th>remarks</th>
   </tr>
   <% let i = 0; for(let question of collection.questions){ %>
-  <form action="/collection/:id" method="post">
+  <form action="/update/<%=question._id %>" method="post">
     <tr>
       <td><%= question.title %></td>
       <td><select name="submissionstatus">
