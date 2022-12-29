@@ -1,8 +1,10 @@
 const { default: mongoose } = require("mongoose");
 const { Collection } = require("../models/collection");
 const { Question } = require("../models/question");
+const expressError = require("../utils/errorclass");
 const { User } = require("../models/user");
 const schema = mongoose.Schema;
+const schemas = require("../schemas.js");
 // const saveschema = new schema({
 //   submission: {
 //     type: String,
@@ -16,6 +18,24 @@ const schema = mongoose.Schema;
 // });
 
 module.exports = {
+  validatequestion: (req, res, next) => {
+    const { error } = schemas.questionSchema.validate(req.body);
+    if (error) {
+      const msg = error.details.map((el) => el.message).join(",");
+      throw new expressError(msg, 400);
+    } else {
+      next();
+    }
+  },
+  validatedupdate: (req, res, next) => {
+    const { error } = schemas.updatequestionSchema.validate(req.body);
+    if (error) {
+      const msg = error.details.map((el) => el.message).join(",");
+      throw new expressError(msg, 400);
+    } else {
+      next();
+    }
+  },
   renderform: (req, res) => {
     const title = "NEW QUESTION";
     const heading = "NEW QUESTION";

@@ -1,16 +1,34 @@
 const joi = require("joi");
-const Blog = new schema({
-  author: String,
-  title: String,
-  content: String,
-});
 
 module.exports = {
-  Blog: mongoose.model("Blog", Blog),
-};
+  blogschema: joi.object({
+    blog: joi
+      .object({
+        title: joi.string().required(),
+        content: joi.string().required(),
+      })
+      .required(),
+  }),
 
-const blogschema = joi.object({
-  author: joi.string().required(),
-  title: joi.string().required(),
-  content: joi.string().required(),
-});
+  questionSchema: joi.object({
+    title: joi.string().required(),
+    url: joi.string().required(),
+    remarks: joi.string().required(),
+    status: joi
+      .string()
+      .valid("NOT ATTEMPTED", "CORRECT", "INCORRECT", "PARTIALLY SOLVED")
+      .required(),
+  }),
+  updatequestionSchema: joi.object({
+    remark: joi.string().required(),
+    submissionstatus: joi
+      .string()
+      .valid("NOT ATTEMPTED", "CORRECT", "INCORRECT", "PARTIALLY SOLVED")
+      .required(),
+  }),
+  collectionSchema: joi.object({
+    problemname: joi.string().required(),
+    url: joi.string().required(),
+    collectionname: joi.string().required(),
+  }),
+};

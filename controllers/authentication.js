@@ -26,11 +26,14 @@ module.exports = {
   loginrender: (req, res) => {
     const title = "LOgIN";
     const heading = "LOGIN";
+
     res.render("./forms/login", { title, heading });
   },
   loginuser: (req, res) => {
     req.flash("success", "Logged in successfully");
-    res.redirect("/blog");
+    const redirecturl = req.session.returnTo || "/blog";
+    delete req.session.returnTo;
+    res.redirect(redirecturl);
   },
   logout: (req, res) => {
     req.logout((err) => {

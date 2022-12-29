@@ -1,7 +1,18 @@
 const { Blog } = require("../models/blog.js");
 const mongoose = require("mongoose");
+const expressError = require("../utils/errorclass");
+const schemas = require("../schemas.js");
 
 module.exports = {
+  validateblog: (req, res, next) => {
+    const { error } = schemas.blogschema.validate(req.body);
+    if (error) {
+      const msg = error.details.map((el) => el.message).join(",");
+      throw new expressError(msg, 400);
+    } else {
+      next();
+    }
+  },
   blogShow: async (req, res, next) => {
     // const allblogs = await blogs.find({});
     const allblogs = await Blog.find({});

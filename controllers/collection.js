@@ -1,8 +1,20 @@
 const { Question } = require("../models/question");
 const { Collection } = require("../models/collection");
+const expressError = require("../utils/errorclass");
 const { User } = require("../models/user");
 const question = require("../models/question");
+const schemas = require("../schemas.js");
 module.exports = {
+  validatecollection: (req, res, next) => {
+    const { error } = schemas.collectionSchema.validate(req.body);
+    if (error) {
+      const msg = error.details.map((el) => el.message).join(",");
+      throw new expressError(msg, 400);
+      // res.send("error");
+    } else {
+      next();
+    }
+  },
   renderform: (req, res) => {
     const title = "NEW COLLECTION";
     const heading = "NEW COLLECTION";

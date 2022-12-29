@@ -10,7 +10,10 @@ const question = require("../controllers/question");
 
 // console.log(contestadder);
 router.get("/dashboard", contestadder);
-router.route("/blog").get(blog.blogShow).post(blog.createblog);
+router
+  .route("/blog")
+  .get(blog.blogShow)
+  .post(blog.validateblog, blog.createblog);
 router.get("/newblog", middlewares.isLoggedin, blog.newblog);
 router
   .route("/register")
@@ -21,10 +24,18 @@ router
   .route("/login")
   .get(authentication.loginrender)
   .post(
+    (req, res, next) => {
+      console.log(req.session);
+      next();
+    },
     passport.authenticate("local", {
-      failureFlash: true,
+      failureFlash: false,
       failureRedirect: "/login",
     }),
+    (req, res, next) => {
+      console.log(req.session);
+      next();
+    },
     authentication.loginuser
   );
 router.get("/logout", middlewares.isLoggedin, authentication.logout);
@@ -39,13 +50,27 @@ router.get(
 router
   .route("/collection")
   .get(middlewares.isLoggedin, collection.rendercollection)
-  .post(middlewares.isLoggedin, collection.create);
+  .post(
+    middlewares.isLoggedin,
+    collection.validatecollection,
+    collection.create
+  );
 
-router.post("/update/:questionid", middlewares.isLoggedin, question.update);
+router.post(
+  "/update/:questionid",
+  middlewares.isLoggedin,
+  question.validatedupdate,
+  question.update
+);
 
 router
   .route("/question/:id")
   .get(middlewares.isLoggedin, middlewares.isOwner, question.renderform)
-  .post(middlewares.isLoggedin, middlewares.isOwner, question.create);
+  .post(
+    middlewares.isLoggedin,
+    middlewares.isOwner,
+    question.validatequestion,
+    question.create
+  );
 
 module.exports = router;
