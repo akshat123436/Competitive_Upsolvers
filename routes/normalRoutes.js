@@ -9,7 +9,7 @@ const collection = require("../controllers/collection");
 const question = require("../controllers/question");
 
 // console.log(contestadder);
-router.get("/dashboard", contestadder);
+router.get("/", contestadder);
 router
   .route("/blog")
   .get(blog.blogShow)

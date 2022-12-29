@@ -17,8 +17,11 @@ module.exports = {
       });
       //   res.send(user);
       const registereduser = await User.register(user, password);
-      req.flash("success", "Registered successfully");
-      res.redirect("/blog");
+      req.login(registereduser, (err) => {
+        if (err) return next(err);
+        req.flash("success", "Registered successfully");
+        res.redirect("/");
+      });
     } catch (e) {
       res.send(e);
     }
@@ -31,7 +34,7 @@ module.exports = {
   },
   loginuser: (req, res) => {
     req.flash("success", "Logged in successfully");
-    const redirecturl = req.session.returnTo || "/blog";
+    const redirecturl = req.session.returnTo || "/";
     delete req.session.returnTo;
     res.redirect(redirecturl);
   },
@@ -42,7 +45,7 @@ module.exports = {
       }
       req.flash("success", "Logged out successfully");
 
-      res.redirect("/blog");
+      res.redirect("/");
     });
   },
 };
