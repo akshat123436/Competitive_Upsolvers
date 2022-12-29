@@ -60,6 +60,7 @@ module.exports = {
         },
       },
     });
+    req.flash("success", "Question was created successfully!");
     res.redirect(`/collection/${req.params.id}`);
   },
   update: async (req, res) => {
