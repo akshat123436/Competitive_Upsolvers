@@ -1,2 +1,8 @@
 @import "config";
 @import "nav";
+.wrapper {
+  height: 100vh;
+}
+body {
+  background-color: $dark;
+}

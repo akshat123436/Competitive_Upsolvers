@@ -26,6 +26,15 @@ li {
   font-size: large;
   background-color: rgb(193, 166, 141);
 }
+.nav a {
+  display: block;
+  padding: 22px 16px;
+}
+.nav a:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(116, 94, 77);
+  color: white;
+}
 .nav img {
   height: 70%;
   width: 200px;
@@ -38,20 +47,35 @@ li {
 .nav-item {
   background-color: white;
   color: rgb(116, 94, 77);
-  padding: 1.5rem;
 }
 .nav-item.login, .nav-item.register {
   border-radius: 70px;
-  padding-top: 0.5rem;
-  margin: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.nav-item.login a, .nav-item.register a {
+  border-radius: inherit;
+  padding: 10px 16px;
 }
 .nav-item.login {
   margin-right: 0px;
   margin-left: 1.5rem;
 }
+.nav-item.logout > a {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
 .nav-item.active {
   background-color: rgb(116, 94, 77);
   color: white;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+body {
+  background-color: rgb(116, 94, 77);
 }/*# sourceMappingURL=boilerplate.css.map */
