@@ -1,0 +1,26 @@
+$dark: rgb(116 94 77);
+$light: rgb(193, 166, 141);
+$medium: rgb(156 131 110);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style-type: none;
+}
+@mixin sideflex {
+  display: flex;
+  flex-direction: row;
+}

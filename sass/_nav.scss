@@ -1,0 +1,36 @@
+.nav {
+  @include sideflex;
+  overflow: hidden;
+  height: 60px;
+  font-size: large;
+  img {
+    height: 70%;
+    width: 200px;
+    margin: auto;
+  }
+  ul {
+    @include sideflex;
+  }
+  background-color: $light;
+  &-item {
+    background-color: white;
+    color: $dark;
+    padding: 1.5rem;
+  }
+  &-item.login,
+  &-item.register {
+    border-radius: 70px;
+    padding-top: 0.5rem;
+    margin: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  &-item.login {
+    margin-right: 0px;
+    margin-left: 1.5rem;
+  }
+  &-item.active {
+    background-color: $dark;
+    color: white;
+  }
+}

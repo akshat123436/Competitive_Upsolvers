@@ -1,17 +1,19 @@
-<div class="nav">
+<nav class="nav">
   <img class="nav-image" src="/images/logo.png" alt="" />
-
-  <a class="nav-a nav-first" href="/">DASHBOARD</a>
-  <a class="nav-a" href="/blog">BLOG</a>
-
-  <a class="nav-a" href="/collection">YOUR COLLECTIONS</a>
-  <a class="nav-a nav-second" href="/collection/63abd1bcf163adaa2782778f"
-    >DSA 450</a
-  >
-  <% if(!currentuser){ %>
-  <a class="nav-a nav-second" href="/login">LOGIN</a>
-  <a class="nav-a nav-second" href="/register">REGISTER</a>
-  <% } else{ %>
-  <a class="nav-a nav-second" href="/logout"> logout </a>
-  <% } %>
-</div>
+  <ul>
+    <li class="nav-item <%= title == "home" ? "active" : '' %>"><a href="/">DASHBOARD</a></li>
+    <li class="nav-item <%= title == "blogs" ? "active" : '' %>"><a href="/blog">BLOG</a></li>
+    <li class="nav-item <%= title == "YOUR COLLECTIONS" ? "active" : '' %>"><a href="/collection">YOUR COLLECTIONS</a></li>
+    <li class="nav-item <%= title == "DSA 450" ? "active" : '' %>">
+      <a href="/collection/63abd1bcf163adaa2782778f">DSA 450</a>
+    </li>
+    <% if(!currentuser){ %>
+    <li class="nav-item login <%= title == "login" ? "active" : '' %>"><a href="/login">LOGIN</a></li>
+    <li class="nav-item register <%= title == "REGISTERATION" ? "active" : '' %>">
+      <a href="/register">REGISTER</a>
+    </li>
+    <% } else{ %>
+    <li class="nav-item"><a href="/logout"> logout </a></li>
+    <% } %>
+  </ul>
+</nav>

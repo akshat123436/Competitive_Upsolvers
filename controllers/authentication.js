@@ -27,7 +27,7 @@ module.exports = {
     }
   },
   loginrender: (req, res) => {
-    const title = "LOgIN";
+    const title = "login";
     const heading = "LOGIN";
 
     res.render("./forms/login", { title, heading });
