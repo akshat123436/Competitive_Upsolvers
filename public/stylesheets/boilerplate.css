@@ -130,6 +130,33 @@ li {
   margin: 5px;
 }
 
+.flashdiv {
+  position: relative;
+  height: 0;
+  width: 0;
+}
+.flashdiv-content {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  background-color: white;
+  color: rgb(116, 94, 77);
+  flex-direction: column;
+  align-items: center;
+  padding: 17px;
+  border-radius: 25px;
+}
+.flashdiv-content button {
+  background-color: #745e4d;
+  color: white;
+  border: none;
+  border-radius: 26px;
+  padding: 7px;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
 .wrapper {
   height: 100vh;
 }

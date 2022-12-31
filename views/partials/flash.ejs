@@ -1,9 +1,13 @@
 <% if(success && success.length) { %>
 <div class="flashdiv">
-  <%= success %> <button type="button" class="flashbutton">&times;</button>
+  <div class="flashdiv-content">
+    <span><%= success %></span><br />
+    <button type="button" class="flashbutton">&times;</button>
+  </div>
 </div>
 <% } %> <% if(error && error.length) { %>
 <div class="flashdiv">
-  <%= error %><button type="button" class="flashbutton">&times;</button>
+  <span><%= error %></span
+  ><button type="button" class="flashbutton">&times;</button>
 </div>
 <% } %>

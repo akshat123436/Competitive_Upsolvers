@@ -1,0 +1,27 @@
+.flashdiv {
+  position: relative;
+  height: 0;
+  width: 0;
+  &-content {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    background-color: white;
+    color: $dark;
+    flex-direction: column;
+    // justify-content: ;
+    align-items: center;
+    padding: 17px;
+    border-radius: 25px;
+    button {
+      background-color: #745e4d;
+      color: white;
+      border: none;
+      border-radius: 26px;
+      padding: 7px;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+  }
+}
