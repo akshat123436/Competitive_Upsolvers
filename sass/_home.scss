@@ -1,0 +1,59 @@
+.contestTable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  border-spacing: 2px;
+  th,
+  td {
+    padding: 12px 79px;
+    background-color: white;
+    border: 3px solid $light;
+    text-align: center;
+    font-size: small;
+    color: $dark;
+  }
+}
+.home-lower {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 24px;
+  &-dsa450,
+  &-collection {
+    margin: 0px 31px;
+    width: 27%;
+    display: inline-block;
+    // margin: 2px;
+    text-align: center;
+    padding: 40px 0px;
+    padding-bottom: 25px;
+    border-radius: 27px;
+    background-color: $medium;
+    color: $dark;
+
+    span {
+      background-color: white;
+      display: inline-block;
+      padding: 5px;
+      border-radius: 30px;
+    }
+    button {
+      background-color: white;
+      color: inherit;
+      border: none;
+      border-radius: 20px;
+      padding: 5px;
+      font-size: 11px;
+      margin-top: 34px;
+    }
+    button:hover {
+      @include transition-ease;
+      background-color: $dark;
+      color: white;
+    }
+  }
+  &-items {
+    margin: 5px;
+  }
+}

@@ -72,6 +72,64 @@ li {
   color: white;
 }
 
+.contestTable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  border-spacing: 2px;
+}
+.contestTable th,
+.contestTable td {
+  padding: 12px 79px;
+  background-color: white;
+  border: 3px solid rgb(193, 166, 141);
+  text-align: center;
+  font-size: small;
+  color: rgb(116, 94, 77);
+}
+
+.home-lower {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 24px;
+}
+.home-lower-dsa450, .home-lower-collection {
+  margin: 0px 31px;
+  width: 27%;
+  display: inline-block;
+  text-align: center;
+  padding: 40px 0px;
+  padding-bottom: 25px;
+  border-radius: 27px;
+  background-color: rgb(217, 175, 147);
+  color: rgb(116, 94, 77);
+}
+.home-lower-dsa450 span, .home-lower-collection span {
+  background-color: white;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 30px;
+}
+.home-lower-dsa450 button, .home-lower-collection button {
+  background-color: white;
+  color: inherit;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 11px;
+  margin-top: 34px;
+}
+.home-lower-dsa450 button:hover, .home-lower-collection button:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(116, 94, 77);
+  color: white;
+}
+.home-lower-items {
+  margin: 5px;
+}
+
 .wrapper {
   height: 100vh;
 }

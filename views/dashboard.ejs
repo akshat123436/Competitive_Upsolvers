@@ -1,21 +1,38 @@
 <% layout("layouts/boilerplate") %>
 <div class="contests">
-  <% for(let i = 0;i<5;i++){ %> <%var minutes =
-  Math.floor(parseInt(upcoming_contest[i][1])/60) % 60;%> <%var hours =
-  Math.floor(parseInt(upcoming_contest[i][1])/3600) % 24;%> <%var days =
-  Math.floor(parseInt(upcoming_contest[i][1])/3600/24);%>
-
-  <h2>
-    <%=upcoming_contest[i][0]%> <%=`Time remaining : ${days} days ${hours} hours
-    and ${minutes} minutes` %>
-  </h2>
-  <%} %>
+  <table class="contestTable">
+    <tr class="contestTable-head">
+      <th>Name</th>
+      <th>Time Remaining</th>
+    </tr>
+    <% for(let i = 0;i<5;i++){ %> <%var minutes =
+    Math.floor(parseInt(upcoming_contest[i][1])/60) % 60;%> <%var hours =
+    Math.floor(parseInt(upcoming_contest[i][1])/3600) % 24;%> <%var days =
+    Math.floor(parseInt(upcoming_contest[i][1])/3600/24);%>
+    <tr class="contestTable-rows">
+      <td><%=upcoming_contest[i][0]%></td>
+      <td><%=`${days} days ${hours} hours and ${minutes} minutes` %></td>
+    </tr>
+    <%} %>
+  </table>
 </div>
-<div class="blogs horizontal">
-  <div class="dsa450">
-    <h3><a href="/collection/63abd1bcf163adaa2782778f"> DSA 450 Tacker</a></h3>
+<div class="home-lower">
+  <div class="home-lower-dsa450">
+    <span class="home-lower-items">
+      <img src=".\images\code-coding-development-svgrepo-com.svg" alt=""
+    /></span>
+    <h3 class="home-lower-items">DSA 450 Tacker</h3>
+    <button class="home-lower-items">
+      <a href="/collection/63abd1bcf163adaa2782778f">Click Here!</a>
+    </button>
   </div>
-  <div class="dsa450">
-    <h3><a href="/collection"> Your collections</a></h3>
+  <div class="home-lower-dsa450">
+    <span class="home-lower-items">
+      <img src=".\images\code-coding-development-svgrepo-com.svg" alt="" />
+    </span>
+    <h3 class="home-lower-items">Your collections</h3>
+    <button class="home-lower-items">
+      <a href="/collection">Click Here!</a>
+    </button>
   </div>
 </div>
