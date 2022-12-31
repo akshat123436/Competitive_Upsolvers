@@ -2,9 +2,8 @@
 @import "nav";
 @import "home";
 @import "flash";
-.wrapper {
-  height: 100vh;
-}
+@import "centerhead";
+
 body {
   background-color: $dark;
 }

@@ -1,0 +1,16 @@
+.heading {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 0px;
+  background-color: white;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 18px;
+  color: $dark;
+  &-content {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

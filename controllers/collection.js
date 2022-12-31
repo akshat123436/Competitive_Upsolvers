@@ -85,8 +85,9 @@ module.exports = {
   rendercollection: async (req, res) => {
     const userid = req.user._id;
     const user = await User.findById(userid).populate("collections");
+    const heading = "YOUR COLLECTIONS";
     const title = "YOUR COLLECTIONS";
     // res.send(user);
-    res.render("./collection/yourcollections", { title, user });
+    res.render("./collection/yourcollections", { title, user, heading });
   },
 };

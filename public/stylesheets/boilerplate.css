@@ -191,8 +191,21 @@ li {
   margin-top: 12px;
 }
 
-.wrapper {
-  height: 100vh;
+.heading {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 0px;
+  background-color: white;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 18px;
+  color: rgb(116, 94, 77);
+}
+.heading-content {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 body {
