@@ -12,11 +12,44 @@
       color: white;
     }
   }
-
+  &:hover div {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
   img {
-    height: 70%;
-    width: 200px;
+    height: 50%;
     margin: auto;
+  }
+  div {
+    position: absolute;
+    font-size: 12px;
+    transition: 0.3s;
+    transform: translateY(1em);
+  }
+  .eat {
+    visibility: hidden;
+    opacity: 0;
+    left: 96px;
+    top: 25px;
+  }
+  .sleep {
+    opacity: 0;
+    visibility: hidden;
+    left: 238px;
+    top: 24px;
+  }
+  .code {
+    opacity: 0;
+    visibility: hidden;
+    left: 393px;
+    top: 24.5px;
+  }
+  .repeat {
+    opacity: 0;
+    visibility: hidden;
+    left: 543px;
+    top: 24px;
   }
   ul {
     @include sideflex;
