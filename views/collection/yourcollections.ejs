@@ -1,9 +1,13 @@
 <% layout("layouts/boilerplate") %> <%- include("../partials/centerhead.ejs") %>
-<% for(let collection of user.collections){ %>
-<div>
-  <h2>
-    <a href="/collection/<%=collection._id %> "><%= collection.title %></a>
-  </h2>
+<div class="your-container">
+  <% for(let collection of user.collections){ %>
+
+  <a class="your-collection" href="/collection/<%=collection._id %> "
+    ><%= collection.title %></a
+  >
+
+  <%} %>
 </div>
-<%} %>
-<button><a href="/newcollection">ADD NEW COLLECTION</a></button>
+<div class="your">
+  <a class="your-button" href="/newcollection">ADD NEW COLLECTION</a>
+</div>

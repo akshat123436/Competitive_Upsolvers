@@ -1,0 +1,55 @@
+.your {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+  &-container {
+    width: 75%;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 30px auto;
+    background-color: $verydark;
+    border-radius: 20px;
+    padding: 13px 20px;
+  }
+  &-collection {
+    text-transform: uppercase;
+    line-height: normal;
+    display: inline-block;
+    background-color: white;
+    width: 231px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    text-align: center;
+    height: 215px;
+    padding-top: 75px;
+    border-radius: 15px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    color: $verydark;
+    border: 5px solid $dark;
+    &:hover {
+      @include transition-ease;
+      background-color: $dark;
+      border: 5px solid white;
+      color: white;
+    }
+  }
+  &-button {
+    background-color: white;
+    color: inherit;
+    border: none;
+    border-radius: 10px;
+    padding: 25px 90px;
+    font-size: 11px;
+    // margin-top: 10px;
+    // margin-left: auto;
+    &:hover {
+      @include transition-ease;
+      background-color: $verydark;
+      color: white;
+    }
+  }
+}

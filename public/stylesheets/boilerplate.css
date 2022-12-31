@@ -208,6 +208,60 @@ li {
   text-overflow: ellipsis;
 }
 
+.your {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+.your-container {
+  width: 75%;
+  overflow: auto;
+  white-space: nowrap;
+  margin: 30px auto;
+  background-color: #452727;
+  border-radius: 20px;
+  padding: 13px 20px;
+}
+.your-collection {
+  text-transform: uppercase;
+  line-height: normal;
+  display: inline-block;
+  background-color: white;
+  width: 231px;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  text-align: center;
+  height: 215px;
+  padding-top: 75px;
+  border-radius: 15px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 25px;
+  color: #452727;
+  border: 5px solid rgb(116, 94, 77);
+}
+.your-collection:hover {
+  transition: all 0.35s ease-in-out;
+  background-color: rgb(116, 94, 77);
+  border: 5px solid white;
+  color: white;
+}
+.your-button {
+  background-color: white;
+  color: inherit;
+  border: none;
+  border-radius: 10px;
+  padding: 25px 90px;
+  font-size: 11px;
+}
+.your-button:hover {
+  transition: all 0.35s ease-in-out;
+  background-color: #452727;
+  color: white;
+}
+
 body {
   background-color: rgb(116, 94, 77);
 }/*# sourceMappingURL=boilerplate.css.map */
