@@ -1,0 +1,78 @@
+.collection-table {
+  text-transform: uppercase;
+  border-collapse: collapse;
+  border-style: hidden;
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  &-data,
+  &-head {
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12px;
+    background-color: $dark;
+    border: 2px solid white;
+  }
+  button {
+    background-color: $verydark;
+    color: white;
+    border: none;
+    font-size: x-small;
+    padding: 9px;
+    border-radius: 5px;
+    &:hover {
+      @include transition-ease;
+      background-color: white;
+      color: $verydark;
+    }
+  }
+  a:hover {
+    @include transition-ease;
+    color: white;
+  }
+}
+
+.select {
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: $verydark;
+  font-size: x-small;
+  &:hover {
+    @include transition-ease;
+    background-color: white;
+    color: $verydark;
+  }
+}
+.remark {
+  background-color: $verydark;
+  color: white;
+  border: none;
+  text-align: center;
+  width: 315px;
+  height: 40px;
+  font-size: x-small;
+  border-radius: 5px;
+  &:focus-visible {
+    border: 3px solid white;
+    box-shadow: none;
+    outline: none;
+  }
+}
+.newquestion {
+  position: absolute;
+  top: 88px;
+  right: 81px;
+  width: 123px;
+  background-color: white;
+  text-align: center;
+  padding: 9px;
+  border-radius: 10px;
+  &:hover {
+    @include transition-ease;
+    background-color: $verydark;
+    color: white;
+  }
+}

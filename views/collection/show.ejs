@@ -1,26 +1,27 @@
 <% layout("layouts/boilerplate") %> <%- include("../partials/centerhead.ejs") %>
 <% if(collection._id != "63abd1bcf163adaa2782778f")  {%> 
-<button><a href="/question/<%= collection._id %> ">ADD NEW QUESTION</a></button>
+<a class="newquestion" href="/question/<%= collection._id %> ">ADD NEW QUESTION</a>
 <% } %> 
-<table>
-  <tr>
-    <th>title</th>
-    <th>submission status</th>
-    <th>remarks</th>
+<table class="collection-table">
+  <tr class="collection-table-row">
+    <th class="collection-table-head" style="width: 45%;">title</th>
+    <th class="collection-table-head">submission status</th>
+    <th class="collection-table-head" style="width: 30%;">remarks</th>
+    <th></th>
   </tr>
   <% let i = 0; for(let question of collection.questions){ %>
   <form action="/update/<%=question._id %>" method="post">
-    <tr>
-      <td><a href="<%=question.url %>"><%= question.title %></a></td>
-      <td><select name="submissionstatus">
+    <tr class ="collection-table-row">
+      <td class="collection-table-data"><a href="<%=question.url %>"><%= question.title %></a></td>
+      <td class="collection-table-data"><select class="select" name="submissionstatus">
         <option value="CORRECT"<%= (submissionstatus[i]==="CORRECT") ? "selected" : "" %>>CORRECT</option>
         <option value="NOT ATTEMPTED" <%= (submissionstatus[i]==="NOT ATTEMPTED") ? "selected" : "" %> >NOT ATTEMPTED</option> 
         <option value="INCORRECT"<%= (submissionstatus[i]==="INCORRECT") ? "selected" : "" %>>INCORRECT</option>
         <option value="PARTIALLY SOLVED"<%= (submissionstatus[i]==="PARTIALLY SOLVED") ? "selected" : "" %>>PARTIALLY SOLVED</option>
       </select></td>
-      <td>    <input type="text" name="remark" id="" value = "<%= remarks[i] %> ">
+      <td class="collection-table-data">    <input type="text" class="remark" name="remark" id="" value = "<%= remarks[i] %> ">
       </td>
-      <td><button type="submit">UPDATE</button></td>
+      <td class="collection-table-data"><button type="submit">UPDATE</button></td>
     </tr>
   </form>
   <% i++; } %>

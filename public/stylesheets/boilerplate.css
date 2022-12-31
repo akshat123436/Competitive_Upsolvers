@@ -303,6 +303,86 @@ li {
   margin-top: 20px;
 }
 
+.collection-table {
+  text-transform: uppercase;
+  border-collapse: collapse;
+  border-style: hidden;
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+}
+.collection-table-data, .collection-table-head {
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 12px;
+  background-color: rgb(116, 94, 77);
+  border: 2px solid white;
+}
+.collection-table button {
+  background-color: #452727;
+  color: white;
+  border: none;
+  font-size: x-small;
+  padding: 9px;
+  border-radius: 5px;
+}
+.collection-table button:hover {
+  transition: all 0.35s ease-in-out;
+  background-color: white;
+  color: #452727;
+}
+.collection-table a:hover {
+  transition: all 0.35s ease-in-out;
+  color: white;
+}
+
+.select {
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #452727;
+  font-size: x-small;
+}
+.select:hover {
+  transition: all 0.35s ease-in-out;
+  background-color: white;
+  color: #452727;
+}
+
+.remark {
+  background-color: #452727;
+  color: white;
+  border: none;
+  text-align: center;
+  width: 315px;
+  height: 40px;
+  font-size: x-small;
+  border-radius: 5px;
+}
+.remark:focus-visible {
+  border: 3px solid white;
+  box-shadow: none;
+  outline: none;
+}
+
+.newquestion {
+  position: absolute;
+  top: 88px;
+  right: 81px;
+  width: 123px;
+  background-color: white;
+  text-align: center;
+  padding: 9px;
+  border-radius: 10px;
+}
+.newquestion:hover {
+  transition: all 0.35s ease-in-out;
+  background-color: #452727;
+  color: white;
+}
+
 body {
   background-color: rgb(116, 94, 77);
 }/*# sourceMappingURL=boilerplate.css.map */
