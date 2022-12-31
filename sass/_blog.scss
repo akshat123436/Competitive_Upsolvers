@@ -1,0 +1,45 @@
+.blog {
+  &-post:nth-of-type(1) {
+    margin-top: 2px;
+  }
+  &-post {
+    color: $dark;
+    background-color: white;
+    margin: auto;
+    width: 85%;
+    margin-top: 4px;
+    padding: 30px;
+    line-height: normal;
+    h4 {
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: rgb(74, 60, 49);
+      margin-bottom: 3px;
+    }
+  }
+  &-new {
+    position: absolute;
+    right: 95px;
+    top: 87px;
+
+    background-color: white;
+    color: inherit;
+    border: none;
+    border-radius: 50px;
+    padding: 25px 15px;
+    font-size: 11px;
+    // margin-top: 10px;
+    // margin-left: auto;
+    &:hover {
+      @include transition-ease;
+      background-color: $verydark;
+      color: white;
+    }
+  }
+}
+
+.spacer {
+  margin-top: 20px;
+}

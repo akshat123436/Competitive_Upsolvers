@@ -1,9 +1,10 @@
 <% layout("layouts/boilerplate") %> <%- include("./partials/centerhead.ejs") %>
-<a href="/newblog">CREATE BLOG</a>
+<div class="spacer"></div>
+<a class="blog-new" href="/newblog">CREATE BLOG</a>
 <% for(let ablog of allblogs){ %>
-<div>
-  <h2><%=ablog.author %></h2>
-  <h1><%=ablog.title %></h1>
+<div class="blog-post">
+  <h4>Author : <%=ablog.author %></h4>
+  <h2><%=ablog.title %></h2>
   <p><%=ablog.content %></p>
 </div>
 <%} %>
