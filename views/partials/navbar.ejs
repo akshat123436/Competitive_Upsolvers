@@ -1,12 +1,20 @@
 <nav class="nav">
   <img class="nav-image-eat" src="\images\eat-svgrepo-com.svg" alt="" />
+  <% if(currentuser){ %> 
   <div class="eat">EAT !</div>
+  <% } %> 
   <img class="nav-image-sleep" src="\images\sleep-svgrepo-com.svg" alt="" />
+  <% if(currentuser){ %> 
   <div class="sleep">SLEEP !</div>
+  <% } %> 
   <img class="nav-image-code" src="\images\code-svgrepo-com.svg" alt="" />
+  <% if(currentuser){ %> 
   <div class="code">CODE !</div>
+  <% } %> 
   <img class="nav-image-repeat" src="\images\repeat-svgrepo-com.svg" alt="" />
+  <% if(currentuser){ %> 
   <div class="repeat">REPEAT !</div>
+  <% } %> 
   <ul>
     <li class="nav-item <%= title == "home" ? "active" : '' %>"><a href="/">DASHBOARD</a></li>
     <li class="nav-item <%= title == "blogs" ? "active" : '' %>"><a href="/blog">BLOG</a></li>
