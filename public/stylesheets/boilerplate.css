@@ -383,6 +383,134 @@ li {
   color: white;
 }
 
+.form {
+  width: 60%;
+  height: 65%;
+  text-align: center;
+  background-color: rgb(193, 166, 141);
+  color: #452727;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 0px 150px;
+}
+.form label,
+.form input,
+.form textarea,
+.form select {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+.form input {
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  color: #452727;
+}
+.form input:focus-visible {
+  border: 3px solid rgb(116, 94, 77);
+  box-shadow: none;
+  outline: none;
+}
+.form button {
+  background-color: white;
+  color: #452727;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+.form button:hover {
+  transition: all 0.35s ease-in-out;
+  background-color: rgb(116, 94, 77);
+  color: white;
+}
+.form select {
+  padding: 12px 0px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: x-small;
+  background-color: white;
+}
+.form select:hover {
+  transition: all 0.35s ease-in-out;
+  background-color: #452727;
+  color: white;
+}
+.form textarea {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  color: #452727;
+}
+.form textarea:focus-visible {
+  border: 3px solid rgb(116, 94, 77);
+  box-shadow: none;
+  outline: none;
+}
+
+.collectionform label {
+  padding-top: 20px;
+}
+.collectionform input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.collectionform button {
+  margin-top: 20px;
+}
+
+.questionform label {
+  padding-top: 10px;
+}
+.questionform input {
+  margin-top: 7px;
+  margin-bottom: 13px;
+}
+.questionform select {
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+.questionform button {
+  margin-top: 9px;
+}
+
+.blogform label {
+  padding-top: 10px;
+}
+.blogform input,
+.blogform textarea {
+  margin-top: 7px;
+  margin-bottom: 13px;
+}
+.blogform select {
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+.blogform button {
+  margin-top: 9px;
+}
+
+.loginform label,
+.registerform label {
+  padding-top: 20px;
+}
+.loginform input,
+.registerform input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.loginform button,
+.registerform button {
+  margin-top: 20px;
+}
+
 body {
   background-color: rgb(116, 94, 77);
 }/*# sourceMappingURL=boilerplate.css.map */

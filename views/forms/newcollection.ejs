@@ -1,13 +1,11 @@
 <% layout("layouts/boilerplate") %> <%- include("../partials/centerhead.ejs") %>
-<form action="/collection" method="post">
+<form class="form collectionform" action="/collection" method="post">
+  <div></div>
   <label for="collectionname">COLLECTION NAME : </label>
   <input type="text" name="collectionname" id="collectionname" />
-  <br />
   <label for="problemname">PROBLEM TITLE : </label>
   <input type="text" name="problemname" id="problemname" />
-  <br />
   <label for="url">URL : </label>
   <input type="text" name="url" id="url" />
-  <br />
   <button type="submit">ADD</button>
 </form>

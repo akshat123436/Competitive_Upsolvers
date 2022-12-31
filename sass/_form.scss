@@ -1,0 +1,132 @@
+.form {
+  width: 60%;
+  height: 65%;
+  text-align: center;
+  background-color: $light;
+  color: $verydark;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 0px 150px;
+  label,
+  input,
+  textarea,
+  select {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  input {
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    color: $verydark;
+  }
+  input:focus-visible {
+    border: 3px solid $dark;
+    box-shadow: none;
+    outline: none;
+  }
+  button {
+    background-color: white;
+    color: $verydark;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    &:hover {
+      @include transition-ease;
+      background-color: $dark;
+      color: white;
+    }
+  }
+  select {
+    padding: 12px 0px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: x-small;
+    background-color: white;
+  }
+  select:hover {
+    @include transition-ease;
+    background-color: $verydark;
+    color: white;
+  }
+  textarea {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    color: $verydark;
+  }
+  textarea:focus-visible {
+    border: 3px solid $dark;
+    box-shadow: none;
+    outline: none;
+  }
+}
+.collectionform {
+  label {
+    padding-top: 20px;
+  }
+  input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  button {
+    margin-top: 20px;
+  }
+}
+
+.questionform {
+  label {
+    padding-top: 10px;
+  }
+  input {
+    margin-top: 7px;
+    margin-bottom: 13px;
+  }
+  select {
+    margin-top: 10px;
+    margin-bottom: 13px;
+  }
+  button {
+    margin-top: 9px;
+  }
+}
+
+.blogform {
+  label {
+    padding-top: 10px;
+  }
+  input,
+  textarea {
+    margin-top: 7px;
+    margin-bottom: 13px;
+  }
+  select {
+    margin-top: 10px;
+    margin-bottom: 13px;
+  }
+  button {
+    margin-top: 9px;
+  }
+}
+
+.loginform,
+.registerform {
+  label {
+    padding-top: 20px;
+  }
+  input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  button {
+    margin-top: 20px;
+  }
+}
