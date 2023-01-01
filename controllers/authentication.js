@@ -10,7 +10,7 @@ module.exports = {
   registeruser: async (req, res, next) => {
     try {
       const { username, password } = req.body;
-      const dsa450 = await Collection.findById("63abd1bcf163adaa2782778f");
+      const dsa450 = await Collection.findById("63b104054d385350b8331b31");
       const user = new User({
         username,
         collections: [dsa450],

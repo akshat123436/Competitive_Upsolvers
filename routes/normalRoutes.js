@@ -25,18 +25,10 @@ router
   .route("/login")
   .get(authentication.loginrender)
   .post(
-    (req, res, next) => {
-      console.log(req.session);
-      next();
-    },
     passport.authenticate("local", {
-      failureFlash: false,
+      failureFlash: true,
       failureRedirect: "/login",
     }),
-    (req, res, next) => {
-      console.log(req.session);
-      next();
-    },
     authentication.loginuser
   );
 router.get("/logout", middlewares.isLoggedin, authentication.logout);

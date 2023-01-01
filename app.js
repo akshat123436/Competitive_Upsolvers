@@ -1,3 +1,6 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config({ path: __dirname + "/.env" });
+}
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -14,8 +17,11 @@ const flash = require("connect-flash");
 const MongoDBStore = require("connect-mongo");
 main().catch((err) => console.log(err));
 
+// "mongodb://localhost:27017/projectwebsite"
+
 async function main() {
-  await mongoose.connect("mongodb://localhost:27017/projectwebsite");
+  const DBURL = process.env.DB_URL;
+  await mongoose.connect(DBURL);
 }
 const db = mongoose.connection;
 
