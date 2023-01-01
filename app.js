@@ -17,8 +17,6 @@ const flash = require("connect-flash");
 const MongoDBStore = require("connect-mongo");
 main().catch((err) => console.log(err));
 
-// "mongodb://localhost:27017/projectwebsite"
-
 async function main() {
   const DBURL =
     process.env.DB_URL || "mongodb://localhost:27017/projectwebsite";
@@ -29,6 +27,10 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
 db.once("open", () => {
   console.log("connection open");
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => {
+    console.log(`list on port ${port}`);
+  });
 });
 
 const store = MongoDBStore.create({
@@ -97,8 +99,4 @@ app.use((err, req, res, next) => {
   const { status = 500 } = err;
   const title = "Error";
   res.status(status).render("error", { err, title });
-});
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`list on port ${port}`);
 });
