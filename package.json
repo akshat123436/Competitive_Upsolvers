@@ -2,8 +2,8 @@
   "name": "cp-project",
   "version": "1.0.0",
   "description": "This web application tracks the stats of a user across various competitive programming platforms and provides other various functionalities",
-  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
