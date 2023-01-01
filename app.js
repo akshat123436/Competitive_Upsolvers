@@ -20,7 +20,8 @@ main().catch((err) => console.log(err));
 // "mongodb://localhost:27017/projectwebsite"
 
 async function main() {
-  const DBURL = process.env.DB_URL;
+  const DBURL =
+    process.env.DB_URL || "mongodb://localhost:27017/projectwebsite";
   await mongoose.connect(DBURL);
 }
 const db = mongoose.connection;
@@ -30,31 +31,31 @@ db.once("open", () => {
   console.log("connection open");
 });
 
-// const store = MongoDBStore.create({
-//   mongoUrl: "mongodb://localhost:27017/projectwebsite",
-//   secret: "thisshouldbeabettersecret!",
-//   touchAfter: 24 * 60 * 60,
-// });
+const store = MongoDBStore.create({
+  mongoUrl: process.env.DB_URL || "mongodb://localhost:27017/projectwebsite",
+  secret: process.env.SECRET || "thisshouldbeabettersecret!",
+  touchAfter: 24 * 60 * 60,
+});
 
-// store.on("error", function (e) {
-//   console.log("store error", e);
-// });
+store.on("error", function (e) {
+  console.log("store error", e);
+});
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.engine("ejs", ejsmate);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 const sessionConfig = {
-  // store,
-  secret: "thisshouldbeabettersecret!",
+  store,
+  secret: process.env.SECRET || "thisshouldbeabettersecret!",
   resave: false,
   // unset: "keep",
-  store: MongoDBStore.create({
-    mongoUrl: "mongodb://localhost:27017/projectwebsite",
-    crypto: {
-      secret: "My database",
-    },
-  }),
+  // store: MongoDBStore.create({
+  //   mongoUrl: "mongodb://localhost:27017/projectwebsite",
+  //   crypto: {
+  //     secret: "My database",
+  //   },
+  // }),
   saveUninitialized: true,
   cookie: {
     // httpOnly: true,
@@ -97,7 +98,7 @@ app.use((err, req, res, next) => {
   const title = "Error";
   res.status(status).render("error", { err, title });
 });
-
-app.listen(3000, () => {
-  console.log("on port 3000");
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`list on port ${port}`);
 });
