@@ -44,22 +44,24 @@ li {
   height: 50%;
   margin: auto;
 }
-.nav div {
-  position: absolute;
-  font-size: 12px;
-  transition: 0.3s;
-  transform: translateY(1em);
-}
 .nav .eat {
   visibility: hidden;
   opacity: 0;
   left: 96px;
   top: 25px;
+  position: absolute;
+  font-size: 12px;
+  transition: 0.3s;
+  transform: translateY(1em);
 }
 .nav .sleep {
   opacity: 0;
   visibility: hidden;
   left: 238px;
+  position: absolute;
+  font-size: 12px;
+  transition: 0.3s;
+  transform: translateY(1em);
   top: 24px;
 }
 .nav .code {
@@ -67,11 +69,19 @@ li {
   visibility: hidden;
   left: 393px;
   top: 24.5px;
+  position: absolute;
+  font-size: 12px;
+  transition: 0.3s;
+  transform: translateY(1em);
 }
 .nav .repeat {
   opacity: 0;
   visibility: hidden;
   left: 543px;
+  position: absolute;
+  font-size: 12px;
+  transition: 0.3s;
+  transform: translateY(1em);
   top: 24px;
 }
 .nav ul {
@@ -104,6 +114,11 @@ li {
 .nav-item.active {
   background-color: rgb(116, 94, 77);
   color: white;
+}
+
+.profile {
+  background-color: rgb(193, 166, 141);
+  position: absolute;
 }
 
 .contestTable {
@@ -162,6 +177,12 @@ li {
 }
 .home-lower-items {
   margin: 5px;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -20px;
 }
 
 .flashdiv {

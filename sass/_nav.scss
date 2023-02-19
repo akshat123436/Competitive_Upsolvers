@@ -21,22 +21,24 @@
     height: 50%;
     margin: auto;
   }
-  div {
-    position: absolute;
-    font-size: 12px;
-    transition: 0.3s;
-    transform: translateY(1em);
-  }
   .eat {
     visibility: hidden;
     opacity: 0;
     left: 96px;
     top: 25px;
+    position: absolute;
+    font-size: 12px;
+    transition: 0.3s;
+    transform: translateY(1em);
   }
   .sleep {
     opacity: 0;
     visibility: hidden;
     left: 238px;
+    position: absolute;
+    font-size: 12px;
+    transition: 0.3s;
+    transform: translateY(1em);
     top: 24px;
   }
   .code {
@@ -44,11 +46,19 @@
     visibility: hidden;
     left: 393px;
     top: 24.5px;
+    position: absolute;
+    font-size: 12px;
+    transition: 0.3s;
+    transform: translateY(1em);
   }
   .repeat {
     opacity: 0;
     visibility: hidden;
     left: 543px;
+    position: absolute;
+    font-size: 12px;
+    transition: 0.3s;
+    transform: translateY(1em);
     top: 24px;
   }
   ul {
@@ -87,4 +97,9 @@
     background-color: $dark;
     color: white;
   }
+}
+
+.profile {
+  background-color: $light;
+  position: absolute;
 }
