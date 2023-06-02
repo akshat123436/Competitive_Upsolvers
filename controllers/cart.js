@@ -31,4 +31,17 @@ module.exports = {
     res.render("profile", { title, heading });
     return;
   },
+  deleteFromCart: async (req, res) => {
+    const id = req.body.questionId;
+    const val = await User.updateOne(
+      { _id: req.user._id },
+      {
+        $pullAll: {
+          cart: [{ _id: id }],
+        },
+      }
+    );
+    console.log(val);
+    res.redirect("/cart");
+  },
 };
