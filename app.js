@@ -81,7 +81,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", normalRoutes);
+app.use("", normalRoutes);
 
 // app.get("*", (req, res) => {
 //   res.send("No default link encountered");

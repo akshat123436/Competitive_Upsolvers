@@ -21,4 +21,8 @@ module.exports = {
     req.flash("success", "Question was added to cart successfully!");
     res.redirect("/cart");
   },
+  notepad: (req, res) => {
+    res.render("notepad");
+    return;
+  },
 };

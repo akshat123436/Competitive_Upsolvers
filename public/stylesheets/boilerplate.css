@@ -92,14 +92,16 @@ li {
   background-color: white;
   color: rgb(116, 94, 77);
 }
-.nav-item.login, .nav-item.register {
+.nav-item.login,
+.nav-item.register {
   border-radius: 70px;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
 }
-.nav-item.login a, .nav-item.register a {
+.nav-item.login a,
+.nav-item.register a {
   border-radius: inherit;
   padding: 10px 16px;
 }
@@ -144,7 +146,8 @@ li {
   margin: auto;
   margin-top: 24px;
 }
-.home-lower-dsa450, .home-lower-collection {
+.home-lower-dsa450,
+.home-lower-collection {
   margin: 0px 31px;
   width: 27%;
   display: inline-block;
@@ -155,13 +158,15 @@ li {
   background-color: rgb(217, 175, 147);
   color: rgb(116, 94, 77);
 }
-.home-lower-dsa450 span, .home-lower-collection span {
+.home-lower-dsa450 span,
+.home-lower-collection span {
   background-color: white;
   display: inline-block;
   padding: 5px;
   border-radius: 30px;
 }
-.home-lower-dsa450 button, .home-lower-collection button {
+.home-lower-dsa450 button,
+.home-lower-collection button {
   background-color: white;
   color: inherit;
   border: none;
@@ -170,7 +175,8 @@ li {
   font-size: 11px;
   margin-top: 34px;
 }
-.home-lower-dsa450 button:hover, .home-lower-collection button:hover {
+.home-lower-dsa450 button:hover,
+.home-lower-collection button:hover {
   transition: all 0.35s ease-in-out;
   background-color: rgb(116, 94, 77);
   color: white;
@@ -332,7 +338,8 @@ h4 {
   margin: auto;
   margin-top: 30px;
 }
-.collection-table-data, .collection-table-head {
+.collection-table-data,
+.collection-table-head {
   padding: 5px;
   text-align: center;
   text-transform: uppercase;
@@ -534,4 +541,4 @@ h4 {
 
 body {
   background-color: rgb(116, 94, 77);
-}/*# sourceMappingURL=boilerplate.css.map */
+} /*# sourceMappingURL=boilerplate.css.map */

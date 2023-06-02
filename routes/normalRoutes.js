@@ -14,6 +14,7 @@ const question = require("../controllers/question");
 router.get("/", contestadder);
 router.get("/cart", middlewares.isLoggedin, cart.loader);
 router.post("/cart", middlewares.isLoggedin, cart.addToCart);
+router.get("/notepad", cart.notepad);
 router
   .route("/blog")
   .get(blog.blogShow)
