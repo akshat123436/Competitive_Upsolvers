@@ -12,6 +12,12 @@ const UserSchema = new schema({
       ref: Collection,
     },
   ],
+  cart: [
+    {
+      type: schema.Types.ObjectId,
+      ref: Question,
+    },
+  ],
   questions: [
     {
       submission: {

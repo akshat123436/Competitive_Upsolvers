@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
 const { contestadder } = require("../controllers/home");
+const cart = require("../controllers/cart.js");
 const blog = require("../controllers/blog");
 const authentication = require("../controllers/authentication");
 const passport = require("passport");
@@ -11,6 +12,7 @@ const question = require("../controllers/question");
 
 // console.log(contestadder);
 router.get("/", contestadder);
+router.get("/cart", cart.loader);
 router
   .route("/blog")
   .get(blog.blogShow)

@@ -4,14 +4,18 @@
 <% } %> 
 <table class="collection-table">
   <tr class="collection-table-row">
+    <th class="collection-table-head" style="width: 10%;"></th>
     <th class="collection-table-head" style="width: 45%;">title</th>
     <th class="collection-table-head">submission status</th>
     <th class="collection-table-head" style="width: 30%;">remarks</th>
     <th></th>
   </tr>
   <% let i = 0; for(let question of collection.questions){ %>
-  <form action="/update/<%=question._id %>" method="post">
     <tr class ="collection-table-row">
+      <form action="/cart" method="post">
+        <td class="collection-table-data"><button type="submit">add to cart</button></td>
+    </form>
+  <form action="/update/<%=question._id %>" method="post">
       <td class="collection-table-data"><a href="<%=question.url %>"><%= question.title %></a></td>
       <td class="collection-table-data"><select class="select" name="submissionstatus">
         <option value="CORRECT"<%= (submissionstatus[i]==="CORRECT") ? "selected" : "" %>>CORRECT</option>
@@ -22,7 +26,7 @@
       <td class="collection-table-data">    <input type="text" class="remark" name="remark" id="" value = "<%= remarks[i] %> ">
       </td>
       <td class="collection-table-data"><button type="submit">UPDATE</button></td>
-    </tr>
   </form>
+  </tr>
   <% i++; } %>
 </table>
