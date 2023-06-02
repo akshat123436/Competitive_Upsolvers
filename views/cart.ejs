@@ -1,7 +1,7 @@
 <% layout("layouts/boilerplate") %> <%- include("./partials/centerhead.ejs") %>
 <nav>
-  <% if(currentuser.cart.length){ %> <% for(let item in cart){ %> <%= item %> <%
-  } %> <% }else{ %>
+  <% if(currentuser.cart.length){ %> <% for(let item of cartItems){ %>
+  <a href="<%=item.url %>"><%= item.title %></a> %> <% } %> <% }else{ %>
   <div>Your Question Cart is Empty</div>
-  <% } %> <%= currentuser.cart.length %>
+  <% } %>
 </nav>

@@ -13,6 +13,7 @@
   <% let i = 0; for(let question of collection.questions){ %>
     <tr class ="collection-table-row">
       <form action="/cart" method="post">
+        <input type="text" name="questionId" value = "<%=question._id%>" hidden>
         <td class="collection-table-data"><button type="submit">add to cart</button></td>
     </form>
   <form action="/update/<%=question._id %>" method="post">

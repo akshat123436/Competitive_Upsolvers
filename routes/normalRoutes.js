@@ -12,7 +12,8 @@ const question = require("../controllers/question");
 
 // console.log(contestadder);
 router.get("/", contestadder);
-router.get("/cart", cart.loader);
+router.get("/cart", middlewares.isLoggedin, cart.loader);
+router.post("/cart", middlewares.isLoggedin, cart.addToCart);
 router
   .route("/blog")
   .get(blog.blogShow)
