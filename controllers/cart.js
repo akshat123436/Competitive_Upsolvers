@@ -25,4 +25,10 @@ module.exports = {
     res.render("notepad");
     return;
   },
+  profile: (req, res) => {
+    const title = "profile";
+    const heading = "profile";
+    res.render("profile", { title, heading });
+    return;
+  },
 };
