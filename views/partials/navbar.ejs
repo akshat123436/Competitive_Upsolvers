@@ -22,6 +22,8 @@
     <li class="nav-item <%= title == "DSA 450" ? "active" : '' %>">
       <a href="/collection/63b104054d385350b8331b31">DSA 450</a>
     </li>
+    <li class="nav-item <%= title == "cart" ? "active" : '' %>"><a href="/cart">  <img class="nav-image-repeat" src="\images\icons8-cart-30.png" alt="" />
+    </a></li>
     <% if(!currentuser){ %>
     <li class="nav-item login <%= title == "login" ? "active" : '' %>"><a href="/login">LOGIN</a></li>
     <li class="nav-item register <%= title == "REGISTERATION" ? "active" : '' %>">

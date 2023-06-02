@@ -7,7 +7,9 @@ module.exports = {
     // );
     // res.send(response);
     await axios
-      .get("https://codeforces.com/api/contest.list")
+      .get("https://codeforces.com/api/contest.list", {
+        headers: { "Accept-Encoding": "gzip,deflate,compress" },
+      })
       .then((response) => {
         var upcoming_contest = [];
 
