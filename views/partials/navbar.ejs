@@ -1,36 +1,15 @@
-<nav class="nav">
-  <img class="nav-image-eat" src="\images\eat-svgrepo-com.svg" alt="" />
-  <% if(currentuser){ %> 
-  <div class="eat">EAT !</div>
-  <% } %> 
-  <img class="nav-image-sleep" src="\images\sleep-svgrepo-com.svg" alt="" />
-  <% if(currentuser){ %> 
-  <div class="sleep">SLEEP !</div>
-  <% } %> 
-  <img class="nav-image-code" src="\images\code-svgrepo-com.svg" alt="" />
-  <% if(currentuser){ %> 
-  <div class="code">CODE !</div>
-  <% } %> 
-  <img class="nav-image-repeat" src="\images\repeat-svgrepo-com.svg" alt="" />
-  <% if(currentuser){ %> 
-  <div class="repeat">REPEAT !</div>
-  <% } %> 
-  <ul>
+<nav id="nav">
+  <ul class="nav" id="navUl">
+    <li class="nav-item "><a class="alogo" href="/"><img class="logo" src="\images\B__2_-removebg-preview.png" alt="" /></a></li>
     <li class="nav-item <%= title == "home" ? "active" : '' %>"><a href="/">DASHBOARD</a></li>
     <li class="nav-item <%= title == "blogs" ? "active" : '' %>"><a href="/blog">BLOG</a></li>
     <li class="nav-item <%= title == "YOUR COLLECTIONS" ? "active" : '' %>"><a href="/collection">YOUR COLLECTIONS</a></li>
     <li class="nav-item <%= title == "DSA 450" ? "active" : '' %>">
       <a href="/collection/63b104054d385350b8331b31">DSA 450</a>
     </li>
-    <li class="nav-item <%= title == "cart" ? "active" : '' %>"><a href="/cart">  <img class="nav-image-repeat" src="\images\icons8-cart-30.png" alt="" />
+    <li class="nav-item" <%= title == "cart" ? "active" : '' %>"><a class="nav-image-repeat" href="/cart">  <img class="" src="\images\icons8-cart-30.png" alt="" />
     </a></li>
-    <% if(!currentuser){ %>
-    <li class="nav-item login <%= title == "login" ? "active" : '' %>"><a href="/login">LOGIN</a></li>
-    <li class="nav-item register <%= title == "REGISTERATION" ? "active" : '' %>">
-      <a href="/register">REGISTER</a>
-    </li>
-    <% } else{ %>
-    <li class="nav-item logout"><a href="/logout"> logout </a></li>
-    <% } %>
+    <!-- <li class="nav-item logout"><a href="/logout"> logout </a></li>-->
   </ul>
+  <img id="ham" src="\images\menu.png" alt="" class="bars" onclick="toggleClass('nav', 'visible'), toggleClass('ham', 'rotate'), toggleClass('navUl', 'visible')">
 </nav>

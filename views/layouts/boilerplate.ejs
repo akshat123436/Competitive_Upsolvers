@@ -10,15 +10,27 @@
   </head>
   <body>
     <%- include("../partials/navbar") %> <%- include("../partials/flash") %>
-    <a href="/notepad"
-      ><img
-        height="50px"
-        width="50px"
-        src="\images\1021031_pen_icon.png"
-        alt=""
-    /></a>
+    <div>
+      <% if(!currentuser){ %>
+      <a href="/login">LOGIN</a>
+      <a href="/register">REGISTER</a>
+      <% }%> <% if(currentuser){ %>
+      <a href="/profile">Profile</a>
+      <a href="/logout">Logout</a>
+      <% }%>
+
+      <a href="/notepad"
+        ><img
+          height="50px"
+          width="50px"
+          src="\images\1021031_pen_icon.png"
+          alt=""
+      /></a>
+    </div>
+
     <%-body-%>
 
     <script src="/javascripts/temp.js"></script>
+    <script src="/javascripts/nav.js"></script>
   </body>
 </html>
