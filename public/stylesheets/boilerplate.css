@@ -151,7 +151,7 @@ nav .bars {
   border: 3px solid rgb(122, 207, 209);
   text-align: center;
   font-size: small;
-  color: white;
+  color: #30bbd7;
 }
 
 .home-lower {
@@ -169,7 +169,7 @@ nav .bars {
   padding-bottom: 25px;
   border-radius: 27px;
   background-color: #30bbd7;
-  color: white;
+  color: #30bbd7;
 }
 .home-lower-dsa450 span, .home-lower-collection span {
   background-color: white;
@@ -188,7 +188,7 @@ nav .bars {
 }
 .home-lower-dsa450 button:hover, .home-lower-collection button:hover {
   transition: all 0.35s ease-in-out;
-  background-color: white;
+  background-color: #30bbd7;
   color: white;
 }
 .home-lower-items {
@@ -212,7 +212,7 @@ h4 {
   top: 10px;
   display: flex;
   background-color: white;
-  color: white;
+  color: #30bbd7;
   flex-direction: column;
   align-items: center;
   padding: 17px;
@@ -236,7 +236,7 @@ h4 {
   border-radius: 25px;
   margin-top: 20px;
   padding: 18px;
-  color: white;
+  color: #30bbd7;
 }
 .heading-content {
   text-align: center;
@@ -303,7 +303,7 @@ h4 {
   margin-top: 2px;
 }
 .blog-post {
-  color: white;
+  color: #30bbd7;
   background-color: white;
   margin: auto;
   width: 85%;
@@ -353,7 +353,7 @@ h4 {
   text-align: center;
   text-transform: uppercase;
   padding: 12px;
-  background-color: white;
+  background-color: #30bbd7;
   border: 2px solid white;
 }
 .collection-table button {
@@ -449,7 +449,7 @@ h4 {
   color: #006579;
 }
 .form input:focus-visible {
-  border: 3px solid white;
+  border: 3px solid #30bbd7;
   box-shadow: none;
   outline: none;
 }
@@ -462,7 +462,7 @@ h4 {
 }
 .form button:hover {
   transition: all 0.35s ease-in-out;
-  background-color: white;
+  background-color: #30bbd7;
   color: white;
 }
 .form select {
@@ -487,7 +487,7 @@ h4 {
   color: #006579;
 }
 .form textarea:focus-visible {
-  border: 3px solid white;
+  border: 3px solid #30bbd7;
   box-shadow: none;
   outline: none;
 }
@@ -546,6 +546,49 @@ h4 {
 .loginform button,
 .registerform button {
   margin-top: 20px;
+}
+
+.menu-div {
+  position: relative;
+  height: 0;
+  width: 0;
+}
+.menu-div-content {
+  background-color: rgb(122, 207, 209);
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  padding: 15px;
+  padding-left: 7px;
+  border-radius: 19px;
+}
+@media (max-width: 768px) {
+  .menu-div-content {
+    display: flex;
+    left: 37vw;
+    padding: 2px;
+    top: 0px;
+  }
+}
+.menu-div-content a {
+  margin: 5px;
+  display: inline-block;
+  padding: 2px;
+  border-radius: 15px;
+}
+.menu-div-content a:hover {
+  transition: 0.5s;
+  background-color: white;
+}
+.menu-div-content a img {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 768px) {
+  .menu-div-content a img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 body {

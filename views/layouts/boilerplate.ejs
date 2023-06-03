@@ -10,22 +10,21 @@
   </head>
   <body>
     <%- include("../partials/navbar") %> <%- include("../partials/flash") %>
-    <div>
-      <% if(!currentuser){ %>
-      <a href="/login">LOGIN</a>
-      <a href="/register">REGISTER</a>
-      <% }%> <% if(currentuser){ %>
-      <a href="/profile">Profile</a>
-      <a href="/logout">Logout</a>
-      <% }%>
+    <div class="menu-div">
+      <div class="menu-div-content">
+        <% if(!currentuser){ %>
+        <a href="/login"><img src="\images\icons8-login-30.png" alt="" /></a>
+        <a href="/register"
+          ><img src="\images\icons8-register-30.png" alt=""
+        /></a>
 
-      <a href="/notepad"
-        ><img
-          height="50px"
-          width="50px"
-          src="\images\1021031_pen_icon.png"
-          alt=""
-      /></a>
+        <% }%> <% if(currentuser){ %>
+        <a href="/profile"><img src="\images\icons8-user-30.png" alt="" /></a>
+        <a href="/logout"><img src="\images\icons8-logout-30.png" alt="" /></a>
+        <% }%>
+
+        <a href="/notepad"><img src="\images\1021031_pen_icon.png" alt="" /></a>
+      </div>
     </div>
 
     <%-body-%>
