@@ -808,6 +808,63 @@ h4 {
   width: 20px;
 }
 
+.profile {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #c2d5db;
+  padding: 6px;
+  margin-top: 10vh;
+  border-radius: 25px;
+}
+@media (max-width: 768px) {
+  .profile {
+    width: 95%;
+  }
+}
+.profile div {
+  text-align: center;
+  margin: 4vh 0;
+}
+@media (max-width: 768px) {
+  .profile div {
+    margin: 3vh 0;
+  }
+}
+.profile-name {
+  font-size: 2em;
+}
+@media (max-width: 768px) {
+  .profile-name {
+    font-size: 1.7em;
+  }
+}
+.profile-cart {
+  font-size: 1.7em;
+}
+@media (max-width: 768px) {
+  .profile-cart {
+    font-size: 1.5em;
+  }
+}
+.profile-collections {
+  font-size: 1.7em;
+}
+@media (max-width: 768px) {
+  .profile-collections {
+    font-size: 1.5em;
+  }
+}
+.profile-questions {
+  font-size: 1.7em;
+}
+@media (max-width: 768px) {
+  .profile-questions {
+    font-size: 1.5em;
+  }
+}
+
 body {
   background-color: white;
 }
