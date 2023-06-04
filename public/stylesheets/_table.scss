@@ -66,13 +66,15 @@
   display: block;
   margin: auto;
   width: 200px;
-  background-color: white;
+  background-color: $verylight;
   text-align: center;
   padding: 9px;
   border-radius: 10px;
+  margin-top: 3vh;
+
   &:hover {
     @include transition-ease;
-    background-color: $verydark;
+    background-color: $light;
     color: white;
   }
 }

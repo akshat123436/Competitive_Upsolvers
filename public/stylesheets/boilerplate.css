@@ -458,14 +458,15 @@ h4 {
   display: block;
   margin: auto;
   width: 200px;
-  background-color: white;
+  background-color: #efefef;
   text-align: center;
   padding: 9px;
   border-radius: 10px;
+  margin-top: 3vh;
 }
 .newquestion:hover {
   transition: all 0.35s ease-in-out;
-  background-color: #006579;
+  background-color: #c2d5db;
   color: white;
 }
 
