@@ -205,27 +205,68 @@ h4 {
   position: relative;
   height: 0;
   width: 0;
+  top: 70vh;
+  left: 41vw;
+}
+@media (max-width: 768px) {
+  .flashdiv {
+    left: 25vw;
+  }
 }
 .flashdiv-content {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  opacity: 0;
+  border-radius: 13px;
   display: flex;
+  transform: translateY(10px);
+  justify-content: space-between;
   background-color: white;
   color: #30bbd7;
-  flex-direction: column;
   align-items: center;
   padding: 17px;
+  width: 20vw;
   border-radius: 25px;
 }
+@media (max-width: 768px) {
+  .flashdiv-content {
+    width: 50vw;
+  }
+}
 .flashdiv-content button {
-  background-color: #745e4d;
-  color: white;
   border: none;
   border-radius: 26px;
-  padding: 7px;
-  font-size: 12px;
-  margin-top: 12px;
+  background: none;
+  padding-left: 4px;
+  padding-right: 4px;
+  /* padding: 0; */
+  font-size: 25px;
+  transition: 0.5s;
+}
+.flashdiv-content button:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+.opacityTransformation {
+  transition: 0.5s;
+  transform: none;
+  opacity: 1;
+}
+
+.error {
+  background-color: rgb(255, 218, 218);
+  color: red;
+}
+.error div .flashbutton:hover {
+  background-color: red;
+}
+
+.success {
+  background-color: rgb(218, 255, 232);
+  color: rgb(0, 255, 89);
+}
+.success div .flashbutton:hover {
+  background-color: green;
 }
 
 .heading {
