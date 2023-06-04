@@ -8,8 +8,9 @@
 @import "table";
 @import "form";
 @import "menu";
+@import "cart";
 body {
-  background-color: $dark;
+  background-color: white;
 }
 button {
   cursor: pointer;

@@ -1,12 +1,19 @@
 <% layout("layouts/boilerplate") %> <%- include("./partials/centerhead.ejs") %>
-<nav>
+<div class="cart">
   <% if(currentuser.cart.length){ %> <% for(let item of cartItems){ %>
-  <a href="<%=item.url %>"><%= item.title %></a> %>
-  <form method="post" action="/cartDelete">
-    <input name="questionId" type="text" value="<%= item._id %>" hidden />
-    <button type="submit">DELETE!</button>
-  </form>
+  <div class="cart-items">
+    <div class="cart-items-question">
+      <a href="<%=item.url %>"><%= item.title %></a>
+    </div>
+
+    <form class="cart-items-button" method="post" action="/cartDelete">
+      <input name="questionId" type="text" value="<%= item._id %>" hidden />
+      <button type="submit">
+        <img src="\images\icons8-delete-30.png" alt="" />
+      </button>
+    </form>
+  </div>
   <% } %> <% }else{ %>
   <div>Your Question Cart is Empty</div>
   <% } %>
-</nav>
+</div>

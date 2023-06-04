@@ -1,16 +1,21 @@
 .heading {
-  width: 50%;
   margin: 0 auto;
   margin-top: 0px;
-  background-color: white;
   border-radius: 25px;
   margin-top: 20px;
   padding: 18px;
-  color: $medium;
+  color: $dark;
+  border-bottom: 2px solid;
+  border-color: $light;
   &-content {
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  @media (max-width: 768px) {
+    font-size: 0.6em;
+    width: 80%;
+    margin-top: 7vh;
   }
 }
