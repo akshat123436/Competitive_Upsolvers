@@ -5,25 +5,44 @@
   width: 80%;
   margin: auto;
   margin-top: 30px;
+  @media (max-width: 768px) {
+    width: 98%;
+  }
+  &-row {
+  }
   &-data,
   &-head {
     padding: 5px;
     text-align: center;
     text-transform: uppercase;
     padding: 12px;
-    background-color: $medium;
-    border: 2px solid white;
+    border: 2px solid $light;
+    @media (max-width: 768px) {
+      padding: 0px;
+      font-size: 10px;
+    }
+    a {
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
+    }
   }
   button {
-    background-color: $verydark;
+    background-color: $dark;
     color: white;
     border: none;
     font-size: x-small;
     padding: 9px;
     border-radius: 5px;
+    @media (max-width: 768px) {
+      font-size: 7px;
+      margin: 3px;
+      padding: 2px;
+      border-radius: 5px;
+    }
     &:hover {
       @include transition-ease;
-      background-color: white;
+      background-color: $light;
       color: $verydark;
     }
   }
@@ -38,16 +57,20 @@
   border: none;
   padding: 15px;
   border-radius: 5px;
-  background-color: $verydark;
+  background-color: $dark;
   font-size: x-small;
   &:hover {
     @include transition-ease;
-    background-color: white;
+    background-color: $light;
     color: $verydark;
+  }
+  @media (max-width: 768px) {
+    font-size: 7px;
+    padding: 7px;
   }
 }
 .remark {
-  background-color: $verydark;
+  background-color: $dark;
   color: white;
   border: none;
   text-align: center;
@@ -56,9 +79,13 @@
   font-size: x-small;
   border-radius: 5px;
   &:focus-visible {
-    border: 3px solid white;
+    border: 3px solid $light;
     box-shadow: none;
     outline: none;
+  }
+  @media (max-width: 768px) {
+    width: 135px;
+    font-size: 8px;
   }
 }
 .newquestion {
@@ -75,6 +102,6 @@
   &:hover {
     @include transition-ease;
     background-color: $light;
-    color: white;
+    color: $verydark;
   }
 }

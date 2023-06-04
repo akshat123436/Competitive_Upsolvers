@@ -14,7 +14,7 @@
     <tr class ="collection-table-row">
       <form action="/cart" method="post">
         <input type="text" name="questionId" value = "<%=question._id%>" hidden>
-        <td class="collection-table-data"><button type="submit">add to cart</button></td>
+        <td class="collection-table-data"><button type="submit">Add To Cart</button></td>
     </form>
   <form action="/update/<%=question._id %>" method="post">
       <td class="collection-table-data"><a href="<%=question.url %>"><%= question.title %></a></td>
