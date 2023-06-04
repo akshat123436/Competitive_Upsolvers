@@ -296,16 +296,22 @@ h4 {
 .your {
   text-align: center;
   text-transform: uppercase;
-  margin-top: 60px;
+  margin-top: 5vh;
+  margin-bottom: 6vh;
 }
 .your-container {
   width: 75%;
   overflow: auto;
   white-space: nowrap;
   margin: 30px auto;
-  background-color: #006579;
+  background-color: #c2d5db;
   border-radius: 20px;
   padding: 13px 20px;
+}
+@media (max-width: 768px) {
+  .your-container {
+    white-space: normal;
+  }
 }
 .your-collection {
   text-transform: uppercase;
@@ -325,16 +331,37 @@ h4 {
   padding-right: 20px;
   font-size: 25px;
   color: #006579;
-  border: 5px solid #1e698d;
+  border: 2px solid #789fbb;
+}
+@media (max-width: 768px) {
+  .your-collection {
+    text-transform: uppercase;
+    line-height: normal;
+    display: inline-block;
+    background-color: white;
+    width: 235px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    text-align: center;
+    height: unset;
+    padding-top: 0;
+    border-radius: 15px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 18px;
+    color: #006579;
+  }
 }
 .your-collection:hover {
   transition: all 0.35s ease-in-out;
-  background-color: #1e698d;
-  border: 5px solid white;
-  color: white;
+  background-color: #c2d5db;
+  border: 2px solid white;
+  color: #006579;
 }
 .your-button {
-  background-color: white;
+  background-color: #efefef;
   color: inherit;
   border: none;
   border-radius: 10px;
@@ -343,8 +370,13 @@ h4 {
 }
 .your-button:hover {
   transition: all 0.35s ease-in-out;
-  background-color: #006579;
-  color: white;
+  background-color: #c2d5db;
+  color: #006579;
+}
+@media (max-width: 768px) {
+  .your-button {
+    padding: 19px 31px;
+  }
 }
 
 .blog-post:nth-of-type(1) {

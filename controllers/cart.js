@@ -22,7 +22,9 @@ module.exports = {
     res.redirect("/cart");
   },
   notepad: (req, res) => {
-    res.render("notepad");
+    const title = "Notepad";
+    const heading = "Notepad";
+    res.render("notepad", { heading, title });
     return;
   },
   profile: (req, res) => {
