@@ -790,6 +790,12 @@ nav .bars {
     font-size: 0.8em;
   }
 }
+.cart-empty {
+  width: 60%;
+  margin: auto;
+  font-size: large;
+  color: #1e698d;
+}
 .cart-items {
   display: flex;
   justify-content: space-between;
@@ -878,6 +884,17 @@ nav .bars {
   .profile-questions {
     font-size: 1.5em;
   }
+}
+
+.error-message {
+  width: 70%;
+  margin: auto;
+  color: #1e698d;
+  background-color: #c2d5db;
+  padding: 4vh;
+  text-align: center;
+  margin-top: 8vh;
+  border-radius: 15px;
 }
 
 body {

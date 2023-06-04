@@ -10,7 +10,6 @@ module.exports = {
   },
   addToCart: async (req, res) => {
     const id = req.body.questionId;
-    console.log(req.body);
     const questionToAdd = await Question.findById(id);
     const userrr = await User.findByIdAndUpdate(req.user._id, {
       $push: {
@@ -43,7 +42,6 @@ module.exports = {
         },
       }
     );
-    console.log(val);
     res.redirect("/cart");
   },
 };

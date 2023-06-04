@@ -26,7 +26,7 @@ module.exports = {
       })
       .catch((err) => {
         console.log(err);
-        res.send("error");
+        res.send("CODEFORCES API ERROR!");
       });
   },
 };

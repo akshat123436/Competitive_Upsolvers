@@ -46,7 +46,6 @@ module.exports = {
     const collection = await Collection.findById(req.params.id).populate(
       "questions"
     );
-    // console.log(collection);
     const title = collection.title;
     const heading = collection.title;
     const submissionstatus = [];

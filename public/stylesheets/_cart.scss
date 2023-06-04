@@ -6,6 +6,12 @@
     margin: auto;
     font-size: 0.8em;
   }
+  &-empty {
+    width: 60%;
+    margin: auto;
+    font-size: large;
+    color: $dark;
+  }
   &-items {
     display: flex;
     justify-content: space-between;
