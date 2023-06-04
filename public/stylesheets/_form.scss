@@ -3,11 +3,23 @@
   height: 65%;
   text-align: center;
   background-color: $light;
-  color: $verydark;
+  color: $dark;
   margin: auto;
   margin-top: 20px;
   border-radius: 25px;
   padding: 0px 150px;
+  @media (max-width: 768px) {
+    width: 89%;
+    height: 65%;
+    text-align: center;
+    background-color: $light;
+    color: $dark;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0px 10px;
+  }
   label,
   input,
   textarea,
@@ -52,7 +64,7 @@
   }
   select:hover {
     @include transition-ease;
-    background-color: $verydark;
+    background-color: $dark;
     color: white;
   }
   textarea {
