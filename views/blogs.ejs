@@ -1,5 +1,7 @@
 <% layout("layouts/boilerplate") %> <%- include("./partials/centerhead.ejs") %>
-<div><a class="blog-new" href="/newblog">CREATE BLOG</a></div>
+<div class="blog-create">
+  <a class="blog-new" href="/newblog">CREATE BLOG</a>
+</div>
 
 <% for(let ablog of allblogs){ %>
 <div class="blog-post">

@@ -1,4 +1,7 @@
 .blog {
+  &-create {
+    margin-top: 20px;
+  }
   &-post:nth-of-type(1) {
     margin-top: 2px;
   }
@@ -7,16 +10,26 @@
     background-color: white;
     margin: auto;
     width: 85%;
-    margin-top: 4px;
+    margin-top: 20px;
     padding: 30px;
     line-height: normal;
     h4 {
       opacity: 0.8;
       margin-bottom: 10px;
+      color: black;
     }
     h2 {
-      color: rgb(74, 60, 49);
+      color: $dark;
       margin-bottom: 3px;
+    }
+    border-top: 2px solid $light;
+    border-bottom: 2px solid $light;
+    @media (max-width: 768px) {
+      width: 95%;
+      padding: 5px;
+    }
+    p {
+      color: black;
     }
   }
   &-new {
@@ -24,7 +37,7 @@
     width: 150px;
     text-align: center;
     margin: auto;
-    background-color: white;
+    background-color: $verylight;
     color: inherit;
     border: none;
     border-radius: 50px;
@@ -32,8 +45,12 @@
     font-size: 11px;
     &:hover {
       @include transition-ease;
-      background-color: $verydark;
-      color: white;
+      background-color: $light;
+      color: $dark;
+    }
+    @media (max-width: 768px) {
+      padding: 20px 15px;
+      font-size: 13px;
     }
   }
 }
