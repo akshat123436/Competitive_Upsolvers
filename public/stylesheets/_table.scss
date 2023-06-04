@@ -2,7 +2,7 @@
   text-transform: uppercase;
   border-collapse: collapse;
   border-style: hidden;
-  width: 90%;
+  width: 80%;
   margin: auto;
   margin-top: 30px;
   &-data,
@@ -62,10 +62,10 @@
   }
 }
 .newquestion {
-  position: absolute;
-  top: 88px;
-  right: 81px;
-  width: 123px;
+  /* position: relative; */
+  display: block;
+  margin: auto;
+  width: 200px;
   background-color: white;
   text-align: center;
   padding: 9px;
