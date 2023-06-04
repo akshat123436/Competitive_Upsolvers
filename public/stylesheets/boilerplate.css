@@ -151,7 +151,19 @@ nav .bars {
   border: 3px solid #c2d5db;
   text-align: center;
   font-size: small;
-  color: #789fbb;
+  color: #1e698d;
+}
+@media (max-width: 768px) {
+  .contestTable th,
+  .contestTable td {
+    padding: 6px 15px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .contestTable {
+    border-collapse: collapse;
+  }
 }
 
 .home-lower {
@@ -159,6 +171,16 @@ nav .bars {
   width: 50%;
   margin: auto;
   margin-top: 24px;
+}
+@media (max-width: 768px) {
+  .home-lower h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .home-lower {
+    width: 90%;
+  }
 }
 .home-lower-dsa450, .home-lower-collection {
   margin: 0px 31px;
@@ -171,6 +193,13 @@ nav .bars {
   background-color: #789fbb;
   color: #789fbb;
 }
+@media (max-width: 768px) {
+  .home-lower-dsa450, .home-lower-collection {
+    margin: 0px 2px;
+    width: 40%;
+    padding: 15px 0px;
+  }
+}
 .home-lower-dsa450 span, .home-lower-collection span {
   background-color: white;
   display: inline-block;
@@ -179,7 +208,7 @@ nav .bars {
 }
 .home-lower-dsa450 button, .home-lower-collection button {
   background-color: white;
-  color: inherit;
+  color: #1e698d;
   border: none;
   border-radius: 20px;
   padding: 5px;
@@ -188,17 +217,23 @@ nav .bars {
 }
 .home-lower-dsa450 button:hover, .home-lower-collection button:hover {
   transition: all 0.35s ease-in-out;
-  background-color: #789fbb;
+  background-color: #1e698d;
   color: white;
 }
 .home-lower-items {
-  margin: 5px;
+  margin: 3px;
+  color: white;
 }
 
 h4 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: -20px;
+}
+@media (max-width: 768px) {
+  h4 {
+    margin-top: 10vh;
+  }
 }
 
 .flashdiv {

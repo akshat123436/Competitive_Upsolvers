@@ -7,10 +7,10 @@
       <th>Name</th>
       <th>Time Remaining</th>
     </tr>
-    <% for(let i = 0;i<5;i++){ %> <%var minutes =
-    Math.floor(parseInt(upcoming_contest[i][1])/60) % 60;%> <%var hours =
-    Math.floor(parseInt(upcoming_contest[i][1])/3600) % 24;%> <%var days =
-    Math.floor(parseInt(upcoming_contest[i][1])/3600/24);%>
+    <% for(let i = 0;i<5 && i<upcoming_contest.length;i++){ %> <%var
+    minutes = Math.floor(parseInt(upcoming_contest[i][1])/60) % 60;%> <%var
+    hours = Math.floor(parseInt(upcoming_contest[i][1])/3600) % 24;%> <%var days
+    = Math.floor(parseInt(upcoming_contest[i][1])/3600/24);%>
     <tr class="contestTable-rows">
       <td><%=upcoming_contest[i][0]%></td>
       <td><%=`${days} days ${hours} hours and ${minutes} minutes` %></td>
