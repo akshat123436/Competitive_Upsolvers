@@ -32,6 +32,7 @@ router
   .get(authentication.loginrender)
   .post(
     passport.authenticate("local", {
+      keepSessionInfo: true,
       failureFlash: true,
       failureRedirect: "/login",
     }),
