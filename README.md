@@ -1,5 +1,5 @@
-# Competitive-Programming-profile-tracker
-**This is an all in one website for competitive programmers, users can create their collections, add question, track dsa 450 question, add remarks and status for question, write blogs.**
+# Competitive Upsolvers
+**This is a unified platform for competitive programmers, which primarily focuses on making the upsolving task easy, users can create collections, add question, track dsa 450 question, add remarks & status for question, write blogs, draw notes on notepad (canvas) and save them as image. Also, it has a unique feature of adding questions to cart.**
 
 
 **The dashboard of the website displays the upcoming contests of codeforces and the time remaining for them :**
