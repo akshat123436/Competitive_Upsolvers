@@ -532,7 +532,7 @@ nav .bars {
 }
 .collection-table a:hover {
   transition: all 0.35s ease-in-out;
-  color: white;
+  color: #789fbb;
 }
 
 .select {
