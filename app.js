@@ -81,14 +81,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("", normalRoutes);
+app.use("/", normalRoutes);
 
 // app.get("*", (req, res) => {
 //   res.send("No default link encountered");
 // });
 
 app.all("*", (req, res, next) => {
-  console.log("----invalid link");
   next(new expressError("Page not found", 404));
 });
 

@@ -10,7 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #4a98f7;
+  background: #789fbb;
 }
 .container {
   display: flex;
@@ -133,8 +133,12 @@ section {
   background: #6c757d;
 }
 .buttons .save-img {
-  background: #4a98f7;
-  border: 1px solid #4a98f7;
+  background: #c2d5db;
+  border: 1px solid #789fbb;
+}
+.buttons .save-img:hover {
+  transition: 0.5s;
+  background-color: #789fbb;
 }
 .drawing-board {
   flex: 1;

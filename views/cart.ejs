@@ -1,6 +1,6 @@
 <% layout("layouts/boilerplate") %> <%- include("./partials/centerhead.ejs") %>
 <div class="cart">
-  <% if(currentuser.cart.length>0){ %> <% for(let item of cartItems){ %>
+  <% for(let item of cartItems){ %>
   <div class="cart-items">
     <div class="cart-items-question">
       <a href="<%=item.url %>"><%= item.title %></a>
@@ -13,7 +13,5 @@
       </button>
     </form>
   </div>
-  <% } %> <% }else{ %>
-  <div class="cart-empty">Your Question Cart is Empty</div>
   <% } %>
 </div>
